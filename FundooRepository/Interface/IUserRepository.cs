@@ -11,6 +11,7 @@ namespace FundooRepository.Interface
 
         string Login(LoginDetails login);
 
-        string ForgotPassword(LoginDetails login);
+        string ForgotPassword(LoginDetails forgotpassword);
+        string ResetPassword(LoginDetails resetpassword);
     }
 }

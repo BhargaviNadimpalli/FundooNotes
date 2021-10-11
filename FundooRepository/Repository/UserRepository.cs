@@ -35,15 +35,15 @@ namespace FundooRepository.Repository
             try
             {
                 var result = this.userContext.Users.Where(x => x.Email == login.Email
-                                                                     && x.Password == login.Password);
-                int count = result.Count();
-                if (count > 0)
+                                                                     && x.Password == login.Password).FirstOrDefault();
+                
+                if (result != null)
                 {
                     return "Login is successful";
                 }
                else
                 {
-                    return "Email is not valid";
+                    return "Email is not valid or password is not valid";
                 }
             }
             catch (Exception e)
@@ -52,30 +52,27 @@ namespace FundooRepository.Repository
             }
         }
 
-        public string ForgotPassword(LoginDetails login)
+        public string ForgotPassword(LoginDetails forgotpassward)
         {
             try
             {
-                var result = this.userContext.Users.Where(x => x.Email == login.Email);
+                var result = this.userContext.Users.Where(x => x.Email == forgotpassward.Email).FirstOrDefault();
                
-                int count = result.Count();
+                
                
-                if (count > 0)
-                {
-                  
-
+                if (result != null)
+                {                 
                     MailMessage mail = new MailMessage();
-                    SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
+                    SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com",587);
 
                     mail.From = new MailAddress("bhargavinadimpalli423@gmail.com");
-                    mail.To.Add(login.Email);
-                    mail.Subject = "Test Mail";
+                    mail.To.Add(forgotpassward.Email);
+                    mail.Subject = "Fundoo Notes";
                     mail.Body = "This is for testing SMTP mail from GMAIL";
 
-                    SmtpServer.Port = 587;
+                    //SmtpServer.Port = 587;
                     SmtpServer.Credentials = new System.Net.NetworkCredential("bhargavinadimpalli423@gmail.com", "Bhagi@1234");
                     SmtpServer.EnableSsl = true;
-
                     SmtpServer.Send(mail);
 
                     return "Mail Sent Successfully, Please check your mail !";  
@@ -83,6 +80,30 @@ namespace FundooRepository.Repository
                 else
                 {
                     return "Email not Exists ! Please Register ! ";
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+
+
+
+        public string ResetPassword(LoginDetails resetpassword)
+        {
+            try
+            {
+                var user = this.userContext.Users.Where(x => x.Email == resetpassword.Email).FirstOrDefault();
+                if (user != null)
+                {
+                    this.userContext.Users.Update(user);
+                    this.userContext.SaveChanges();
+                    return "Reset password is successfull";
+                }
+                else
+                {
+                    return "Invalid Email. please enter the correct email";
                 }
             }
             catch (Exception e)

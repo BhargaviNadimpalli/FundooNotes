@@ -37,11 +37,23 @@ namespace FundooManager.Manager
                 throw new Exception(e.Message);
             }
         }
-        public string ForgotPassword(LoginDetails login)
+        public string ForgotPassword(LoginDetails forgotpassword)
         {
             try
             {
-                return this.repository.ForgotPassword(login);
+                return this.repository.ForgotPassword(forgotpassword);
+            }
+            catch(Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+
+        public string ResetPassword(LoginDetails resetpassword)
+        {
+            try
+            {
+                return this.repository.ResetPassword(resetpassword);
             }
             catch(Exception e)
             {
