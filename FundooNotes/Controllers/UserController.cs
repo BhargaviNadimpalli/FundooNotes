@@ -41,7 +41,7 @@ namespace FundooNotes.Controllers
         [HttpPost]
         [Route("api/login")]
         public IActionResult Login([FromBody] LoginDetails login)
-        {
+        {                 
             try
             {
                 string result = this.manager.Login(login);
