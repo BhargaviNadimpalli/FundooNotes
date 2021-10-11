@@ -51,8 +51,8 @@ namespace FundooRepository.Repository
             }
             catch (Exception e)
             {
-                throw new Exception(e.Message);
-            }
+                throw new Exception(e.Message);       
+            }                   
         }
         public string EncryptPassword(string password)
         {
