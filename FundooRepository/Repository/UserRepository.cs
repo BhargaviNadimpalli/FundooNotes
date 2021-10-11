@@ -19,8 +19,10 @@ namespace FundooRepository.Repository
         }
         public string Register(UserModel user)
         {
+            var exist = this.userContext.Users.Where(x => x.Email == user.Email).FirstOrDefault();
             try
             {
+                user.Password = this.EncryptPassword(user.Password);
                 this.userContext.Users.Add(user);
                 this.userContext.SaveChanges();
                 return "Registration Successful";
@@ -39,6 +41,7 @@ namespace FundooRepository.Repository
                 
                 if (result != null)
                 {
+                    
                     return "Login is successful";
                 }
                else
@@ -51,6 +54,13 @@ namespace FundooRepository.Repository
                 throw new Exception(e.Message);
             }
         }
+        public string EncryptPassword(string password)
+        {
+            var plainTextBytes = Encoding.UTF8.GetBytes(password);
+            string encoded = Convert.ToBase64String(plainTextBytes);
+            return encoded;
+        }
+
 
         public string ForgotPassword(LoginDetails forgotpassward)
         {
@@ -97,7 +107,7 @@ namespace FundooRepository.Repository
                 var user = this.userContext.Users.Where(x => x.Email == resetpassword.Email).FirstOrDefault();
                 if (user != null)
                 {
-                    this.userContext.Users.Update(user);
+                   // this.userContext.Users.Update(user);
                     this.userContext.SaveChanges();
                     return "Reset password is successfull";
                 }
