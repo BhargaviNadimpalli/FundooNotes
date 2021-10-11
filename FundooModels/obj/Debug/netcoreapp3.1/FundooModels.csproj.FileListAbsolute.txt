@@ -1,0 +1,13 @@
+C:\Users\HP\source\felloeship\FundooNotes\FundooModels\bin\Debug\netcoreapp3.1\FundooModels.exe
+C:\Users\HP\source\felloeship\FundooNotes\FundooModels\bin\Debug\netcoreapp3.1\FundooModels.deps.json
+C:\Users\HP\source\felloeship\FundooNotes\FundooModels\bin\Debug\netcoreapp3.1\FundooModels.runtimeconfig.json
+C:\Users\HP\source\felloeship\FundooNotes\FundooModels\bin\Debug\netcoreapp3.1\FundooModels.runtimeconfig.dev.json
+C:\Users\HP\source\felloeship\FundooNotes\FundooModels\bin\Debug\netcoreapp3.1\FundooModels.dll
+C:\Users\HP\source\felloeship\FundooNotes\FundooModels\bin\Debug\netcoreapp3.1\FundooModels.pdb
+C:\Users\HP\source\felloeship\FundooNotes\FundooModels\obj\Debug\netcoreapp3.1\FundooModels.csproj.AssemblyReference.cache
+C:\Users\HP\source\felloeship\FundooNotes\FundooModels\obj\Debug\netcoreapp3.1\FundooModels.AssemblyInfoInputs.cache
+C:\Users\HP\source\felloeship\FundooNotes\FundooModels\obj\Debug\netcoreapp3.1\FundooModels.AssemblyInfo.cs
+C:\Users\HP\source\felloeship\FundooNotes\FundooModels\obj\Debug\netcoreapp3.1\FundooModels.csproj.CoreCompileInputs.cache
+C:\Users\HP\source\felloeship\FundooNotes\FundooModels\obj\Debug\netcoreapp3.1\FundooModels.dll
+C:\Users\HP\source\felloeship\FundooNotes\FundooModels\obj\Debug\netcoreapp3.1\FundooModels.pdb
+C:\Users\HP\source\felloeship\FundooNotes\FundooModels\obj\Debug\netcoreapp3.1\FundooModels.genruntimeconfig.cache
