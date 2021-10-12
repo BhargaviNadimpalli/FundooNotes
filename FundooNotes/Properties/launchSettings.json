@@ -1,4 +1,4 @@
-﻿.{
+﻿{
   "iisSettings": {
     "windowsAuthentication": false, 
     "anonymousAuthentication": true, 
@@ -8,9 +8,10 @@
     }
   },
   "profiles": {
-    "IIS Express": {
+    "FundooNotes": {
       "commandName": "IISExpress",
       "launchBrowser": true,
+     
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

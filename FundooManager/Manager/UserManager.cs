@@ -27,7 +27,7 @@ namespace FundooManager.Manager
                 throw new Exception(e.Message);
             }
         }
-        public Task<string> Login(LoginDetails login)
+        public string Login(LoginDetails login)
         {
             try
             {
@@ -38,11 +38,11 @@ namespace FundooManager.Manager
                 throw new Exception(e.Message);
             }
         }
-        public Task<string> ForgotPassword(LoginDetails forgotpassword)
+        public string ForgotPassword(string email)
         {
             try
             {
-                return this.repository.ForgotPassword(forgotpassword);
+                return this.repository.ForgotPassword(email);
             }
             catch(Exception e)
             {

@@ -10,9 +10,9 @@ namespace FundooManager.Interface
     {
         Task<string> Register(UserModel user);
 
-        Task<string> Login(LoginDetails login);
+        string Login(LoginDetails login);
 
-        Task<string> ForgotPassword(LoginDetails forgotpassword);
+        string ForgotPassword(string email);
 
         Task<string> ResetPassword(LoginDetails resetpassword);
     }

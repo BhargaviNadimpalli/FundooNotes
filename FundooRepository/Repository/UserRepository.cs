@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Net.Mail;
 using System.Threading.Tasks;
+using Experimental.System.Messaging;
+using System.Net;
 
 namespace FundooRepository.Repository
 {
@@ -20,20 +22,27 @@ namespace FundooRepository.Repository
         }
         public async Task<string> Register(UserModel user)
         {
-            var exist = this.userContext.Users.Where(x => x.Email == user.Email).FirstOrDefault();
             try
             {
-                user.Password = EncryptPassword(user.Password);
-                this.userContext.Users.Add(user);
-                this.userContext.SaveChanges();
-                return "Registration Successful";
+                var exist = this.userContext.Users.Where(x => x.Email == user.Email).FirstOrDefault();
+                if (exist == null)
+                {
+                    user.Password = EncryptPassword(user.Password);
+                    this.userContext.Users.Add(user);
+                    await this.userContext.SaveChangesAsync();
+                    return "Registration Successful";
+                }
+                else
+                {
+                    return "Registration is failed";
+                }
             }
             catch (ArgumentNullException e)
             {
                 throw new Exception(e.Message);
             }
         }
-        public async Task<string> Login(LoginDetails login)
+        public string Login(LoginDetails login)
         {
             try
             {
@@ -63,39 +72,84 @@ namespace FundooRepository.Repository
             strmsg = Convert.ToBase64String(encode);
             return strmsg;
         }
-        public async Task<string> ForgotPassword(LoginDetails forgotpassward)
+        public string ForgotPassword(string email)
         {
             try
             {
-                var result = this.userContext.Users.Where(x => x.Email == forgotpassward.Email).FirstOrDefault();
-                if (result != null)
+                // Check Email is in Database or Not
+                var userCheck = this.userContext.Users
+                                    .Where(e => e.Email == email).FirstOrDefault();
+
+                //If Email is in Database or not so it will return message accordingly
+                if (userCheck != null)
                 {
-                    MailMessage mail = new MailMessage();
-                    SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com", 587);
+                    MessageQueue msgqueue;
+                    if (MessageQueue.Exists(@".\Private$\MailQueue"))
+                    {
+                        msgqueue = new MessageQueue(@".\Private$\MailQueue");
+                    }
+                    else
+                    {
+                        msgqueue = MessageQueue.Create(@".\Private$\MailQueue");
+                    }
+                    Message message = new Message();
+                    message.Formatter = new BinaryMessageFormatter();
+                    message.Body = email;
 
-                    mail.From = new MailAddress("bhargavinadimpalli423@gmail.com");
-                    mail.To.Add(forgotpassward.Email);
-                    mail.Subject = "Fundoo Notes";
-                    mail.Body = "This is for testing SMTP mail from GMAIL";
+                    msgqueue.Label = "Mail";
+                    msgqueue.Send(message);
+                    SendEmail(email);
 
-                    //SmtpServer.Port = 587;
-                    SmtpServer.Credentials = new System.Net.NetworkCredential("bhargavinadimpalli423@gmail.com", "Bhagi@1234");
-                    SmtpServer.EnableSsl = true;
-                    SmtpServer.Send(mail);
-
-                    return "Mail Sent Successfully, Please check your mail !";
+                    return "Send Email Successfully";
                 }
                 else
                 {
-                    return "Email not Exists ! Please Register ! ";
+                    return "Email Id Is not Valid";
                 }
             }
             catch (Exception e)
             {
                 throw new Exception(e.Message);
             }
-        }
 
+        }
+        public void SendEmail(string email)
+        {
+            try
+            {
+                MessageQueue msgqueue;
+                if (MessageQueue.Exists(@".\Private$\MailQueue"))
+                    msgqueue = new MessageQueue(@".\Private$\MailQueue");
+
+                else
+                    msgqueue = MessageQueue.Create(@".\Private$\MailQueue");
+
+                var receiveQueue = new MessageQueue(@".\Private$\MailQueue");
+                var receiveMsg = receiveQueue.Receive();
+                receiveMsg.Formatter = new BinaryMessageFormatter();
+
+                MailMessage mail = new MailMessage();
+                mail.Body = "Reset Password link : www.reset-password.link";
+                mail.From = new MailAddress("bhargavinadimpalli423@gmail");
+                mail.To.Add(email);
+                mail.Subject = "Test Mail";
+
+                //Credintials
+                SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
+                SmtpServer.Port = 587;
+                SmtpServer.UseDefaultCredentials = false;
+                SmtpServer.Credentials = new System.Net.NetworkCredential("bhargavinadimpalli423@gmail", "Bhagi@1234");
+                SmtpServer.EnableSsl = true;
+
+                SmtpServer.Send(mail);
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+
+
+        }
 
 
         public async Task<string> ResetPassword(LoginDetails resetpassword)
@@ -107,7 +161,7 @@ namespace FundooRepository.Repository
                 {
                    
                     user.Password = resetpassword.Password;
-                    this.userContext.SaveChanges();                      
+                    await this.userContext.SaveChangesAsync();                      
                     return "Reset password is successfull";
                 }
                 else
