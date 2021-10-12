@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Net.Mail;
+using System.Threading.Tasks;
 
 namespace FundooRepository.Repository
 {
@@ -17,12 +18,12 @@ namespace FundooRepository.Repository
         {
             this.userContext = userContext;
         }
-        public string Register(UserModel user)
+        public async Task<string> Register(UserModel user)
         {
             var exist = this.userContext.Users.Where(x => x.Email == user.Email).FirstOrDefault();
             try
             {
-                user.Password = this.EncryptPassword(user.Password);
+                user.Password = EncryptPassword(user.Password);
                 this.userContext.Users.Add(user);
                 this.userContext.SaveChanges();
                 return "Registration Successful";
@@ -32,48 +33,45 @@ namespace FundooRepository.Repository
                 throw new Exception(e.Message);
             }
         }
-        public string Login(LoginDetails login)
+        public async Task<string> Login(LoginDetails login)
         {
             try
             {
                 var result = this.userContext.Users.Where(x => x.Email == login.Email
                                                                      && x.Password == login.Password).FirstOrDefault();
-                
+
                 if (result != null)
                 {
-                    
+                    login.Password = EncryptPassword(login.Password);
                     return "Login is successful";
                 }
-               else
+                else
                 {
                     return "Email is not valid or password is not valid";
                 }
             }
             catch (Exception e)
             {
-                throw new Exception(e.Message);       
-            }                   
+                throw new Exception(e.Message);
+            }
         }
         public string EncryptPassword(string password)
         {
-            var plainTextBytes = Encoding.UTF8.GetBytes(password);
-            string encoded = Convert.ToBase64String(plainTextBytes);
-            return encoded;
+            string strmsg = string.Empty;
+            byte[] encode = new byte[password.Length];
+            encode = Encoding.UTF8.GetBytes(password);
+            strmsg = Convert.ToBase64String(encode);
+            return strmsg;
         }
-
-
-        public string ForgotPassword(LoginDetails forgotpassward)
+        public async Task<string> ForgotPassword(LoginDetails forgotpassward)
         {
             try
             {
                 var result = this.userContext.Users.Where(x => x.Email == forgotpassward.Email).FirstOrDefault();
-               
-                
-               
                 if (result != null)
-                {                 
+                {
                     MailMessage mail = new MailMessage();
-                    SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com",587);
+                    SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com", 587);
 
                     mail.From = new MailAddress("bhargavinadimpalli423@gmail.com");
                     mail.To.Add(forgotpassward.Email);
@@ -85,7 +83,7 @@ namespace FundooRepository.Repository
                     SmtpServer.EnableSsl = true;
                     SmtpServer.Send(mail);
 
-                    return "Mail Sent Successfully, Please check your mail !";  
+                    return "Mail Sent Successfully, Please check your mail !";
                 }
                 else
                 {
@@ -100,15 +98,16 @@ namespace FundooRepository.Repository
 
 
 
-        public string ResetPassword(LoginDetails resetpassword)
+        public async Task<string> ResetPassword(LoginDetails resetpassword)
         {
             try
             {
                 var user = this.userContext.Users.Where(x => x.Email == resetpassword.Email).FirstOrDefault();
                 if (user != null)
                 {
-                   // this.userContext.Users.Update(user);
-                    this.userContext.SaveChanges();
+                   
+                    user.Password = resetpassword.Password;
+                    this.userContext.SaveChanges();                      
                     return "Reset password is successfull";
                 }
                 else
@@ -123,3 +122,6 @@ namespace FundooRepository.Repository
         }
     }
 }
+
+
+                    

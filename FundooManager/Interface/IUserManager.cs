@@ -2,17 +2,18 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace FundooManager.Interface
 {                
     public interface IUserManager
     {
-        string Register(UserModel user);
+        Task<string> Register(UserModel user);
 
-        string Login(LoginDetails login);
+        Task<string> Login(LoginDetails login);
 
-        string ForgotPassword(LoginDetails forgotpassword);
+        Task<string> ForgotPassword(LoginDetails forgotpassword);
 
-        string ResetPassword(LoginDetails resetpassword);
+        Task<string> ResetPassword(LoginDetails resetpassword);
     }
 }

@@ -19,11 +19,11 @@ namespace FundooNotes.Controllers
         }
         [HttpPost]
         [Route("api/register")]
-        public IActionResult Register([FromBody] UserModel user)
+        public async Task<IActionResult> Register([FromBody] UserModel user)
         {
             try
             {
-                string resultMessage = this.manager.Register(user);
+                string resultMessage = await this.manager.Register(user);
                 if (resultMessage.Equals("Registration Successful"))
                 {
                     return this.Ok(new ResponseModel<string>() { Status = true, Message = resultMessage });
@@ -40,11 +40,11 @@ namespace FundooNotes.Controllers
         }
         [HttpPost]
         [Route("api/login")]
-        public IActionResult Login([FromBody] LoginDetails login)
-        {                 
+        public async Task<IActionResult> Login([FromBody] LoginDetails login)
+        {                
             try
             {
-                string result = this.manager.Login(login);
+                string result = await this.manager.Login(login);
                 if (result.Equals("Login is successful"))
                 {
                     return this.Ok(new ResponseModel<string>() { Status = true, Message = "Login is completed" });
@@ -61,11 +61,11 @@ namespace FundooNotes.Controllers
         }
         [HttpPost]
         [Route("api/forgotPassword")]
-        public IActionResult ForgotPassword([FromBody] LoginDetails forgotpassword)
+        public async Task<IActionResult> ForgotPassword([FromBody] LoginDetails forgotpassword)
         {
             try
             {
-                string result = this.manager.ForgotPassword(forgotpassword);
+                string result = await this.manager.ForgotPassword(forgotpassword);
                 if(result.Equals("Mail Sent Successfully, Please check your mail !"))
                 {
                     return this.Ok(new ResponseModel<string>() { Status = true, Message = result });
@@ -82,11 +82,11 @@ namespace FundooNotes.Controllers
         }
         [HttpPut]
         [Route("api/resetPassword")]
-        public IActionResult ResetPassword([FromBody] LoginDetails resetpassword)
+        public async Task<IActionResult> ResetPassword([FromBody] LoginDetails resetpassword)
         {
             try 
             {
-                string result = this.manager.ResetPassword(resetpassword);
+                string result = await this.manager.ResetPassword(resetpassword);
                 if (result.Equals("Reset password is successfull"))
                 {
                     return this.Ok(new ResponseModel<string>() { Status = true, Message = result });
