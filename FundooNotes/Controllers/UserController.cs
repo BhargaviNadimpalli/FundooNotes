@@ -40,11 +40,11 @@ namespace FundooNotes.Controllers
         }
         [HttpPost]
         [Route("api/login")]
-        public async Task<IActionResult> Login([FromBody] LoginDetails login)
+        public IActionResult Login([FromBody] LoginDetails login)
         {                
             try
             {
-                string result = await this.manager.Login(login);
+                string result = this.manager.Login(login);
                 if (result.Equals("Login is successful"))
                 {
                     return this.Ok(new ResponseModel<string>() { Status = true, Message = "Login is completed" });
@@ -61,12 +61,12 @@ namespace FundooNotes.Controllers
         }
         [HttpPost]
         [Route("api/forgotPassword")]
-        public async Task<IActionResult> ForgotPassword([FromBody] LoginDetails forgotpassword)
+        public IActionResult ForgotPassword(string email)
         {
             try
             {
-                string result = await this.manager.ForgotPassword(forgotpassword);
-                if(result.Equals("Mail Sent Successfully, Please check your mail !"))
+                string result = this.manager.ForgotPassword(email);
+                if(result.Equals("Send Email Successfully"))
                 {
                     return this.Ok(new ResponseModel<string>() { Status = true, Message = result });
                 }

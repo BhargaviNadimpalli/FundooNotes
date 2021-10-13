@@ -55,3 +55,4 @@ C:\Users\HP\source\felloeship\FundooNotes\FundooManager\obj\Debug\netcoreapp3.1\
 C:\Users\HP\source\felloeship\FundooNotes\FundooManager\obj\Debug\netcoreapp3.1\FundooManager.dll
 C:\Users\HP\source\felloeship\FundooNotes\FundooManager\obj\Debug\netcoreapp3.1\FundooManager.pdb
 C:\Users\HP\source\felloeship\FundooNotes\FundooManager\obj\Debug\netcoreapp3.1\FundooManager.genruntimeconfig.cache
+C:\Users\HP\source\felloeship\FundooNotes\FundooManager\bin\Debug\netcoreapp3.1\Experimental.System.Messaging.dll
