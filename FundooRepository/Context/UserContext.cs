@@ -9,6 +9,7 @@ namespace FundooRepository.Context
     public class UserContext : DbContext
     {
         public DbSet<UserModel> Users { get; set; }
+        public DbSet<NotesModel> notes { get; set; }
         public UserContext(DbContextOptions options) : base(options)
         {
           
