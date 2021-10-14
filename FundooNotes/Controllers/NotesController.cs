@@ -101,6 +101,47 @@ namespace FundooNotes.Controllers
                 return this.NotFound(new ResponseModel<string>() { Status = false, Message = ex.Message });
             }
         }
-
+        [HttpPost]
+        [Route("api/Remainder")]
+        public async Task<IActionResult> SetRemainder(int notesId, string remainder)
+        {
+            try
+            {
+                string result = await this.manager.SetRemainder(notesId, remainder);
+                if (result == "Remainder is Set")
+                {
+                    return this.Ok(new ResponseModel<string>() { Status = true, Message = result });
+                }
+                else
+                {
+                    return this.BadRequest(new ResponseModel<string>() { Status = false, Message = result });
+                }
+            }
+            catch (Exception ex)
+            {
+                return this.NotFound(new ResponseModel<string> { Status = false, Message = ex.Message });
+            }
+        }
+        [HttpPut]
+        [Route("api/deleteRemainder")]
+        public async Task<IActionResult> DeleteRemainder(int notesId)
+        {
+            try
+            {
+                string result = await this.manager.DeleteRemainder(notesId);
+                if (result == "Removed Remainder !")
+                {
+                    return this.Ok(new ResponseModel<string>() { Status = true, Message = result });
+                }
+                else
+                {
+                    return this.BadRequest(new ResponseModel<string>() { Status = false, Message = result });
+                }
+            }
+            catch (Exception ex)
+            {
+                return this.NotFound(new ResponseModel<string> { Status = false, Message = ex.Message });
+            }
+        }
     }
 }
