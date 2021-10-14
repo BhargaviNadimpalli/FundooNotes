@@ -3,6 +3,7 @@ using FundooRepository.Context;
 using FundooRepository.Interface;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -37,5 +38,28 @@ namespace FundooRepository.Repository
                 throw new Exception(e.Message);
             }
         }
+
+        public async Task<string> UpdateNotes(NotesModel model)
+        {
+            try
+            {
+                var exists = this.userContext.notes.Where(x => x.NotesId == model.NotesId).FirstOrDefault();
+                if (exists != null)
+                {
+                    exists.Notes = model.Notes;
+                    exists.Title = model.Title;
+                    this.userContext.notes.Update(exists);
+                    await this.userContext.SaveChangesAsync();
+                    return "Note Updated Successfully !";
+                }
+
+                return "Note is Not present. Add Note";
+            }
+            catch (ArgumentNullException ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
     }
 }

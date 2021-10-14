@@ -9,5 +9,7 @@ namespace FundooManager.Interface
    public interface INotesManager
     {
         Task<string> AddNotes(NotesModel model);
+
+        Task<string> UpdateNotes(NotesModel model);
     }
 }
