@@ -105,5 +105,26 @@ namespace FundooRepository.Repository
                 throw new Exception(e.Message);
             }
         }
-    }
+
+        public async Task<string> SetRemainder(int notesId, string remainder)
+        {
+            try
+            {
+                var exists = this.userContext.notes.Where(x => x.NotesId == notesId).SingleOrDefault();
+                if (exists != null)
+                {
+                    exists.Remainder = remainder;
+                    this.userContext.notes.Update(exists);
+                    await this.userContext.SaveChangesAsync();
+                    return "Remainder is Set";
+                }
+
+                return "Remainder failed";
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+   }
 }

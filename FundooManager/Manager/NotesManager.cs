@@ -65,5 +65,17 @@ namespace FundooManager.Manager
                 throw new Exception(e.Message);
             }
         }
+
+        public Task<string> SetRemainder(int notesId, string remainder)
+        {
+            try
+            {
+                return this.repository.SetRemainder(notesId, remainder);
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
     }
 }

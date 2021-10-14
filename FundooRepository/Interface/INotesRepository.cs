@@ -15,5 +15,8 @@ namespace FundooRepository.Interface
         List<NotesModel> GetNotes(int userId);
 
         Task<string> UpdateColor(int noteId, string color);
+
+        Task<string> SetRemainder(int notesId, string remainder);
+
     }
 }
