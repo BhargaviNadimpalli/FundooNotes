@@ -122,6 +122,26 @@ namespace FundooNotes.Controllers
                 return this.NotFound(new ResponseModel<string> { Status = false, Message = ex.Message });
             }
         }
-
+        [HttpPut]
+        [Route("api/deleteRemainder")]
+        public async Task<IActionResult> DeleteRemainder(int notesId)
+        {
+            try
+            {
+                string result = await this.manager.DeleteRemainder(notesId);
+                if (result == "Removed Remainder !")
+                {
+                    return this.Ok(new ResponseModel<string>() { Status = true, Message = result });
+                }
+                else
+                {
+                    return this.BadRequest(new ResponseModel<string>() { Status = false, Message = result });
+                }
+            }
+            catch (Exception ex)
+            {
+                return this.NotFound(new ResponseModel<string> { Status = false, Message = ex.Message });
+            }
+        }
     }
 }

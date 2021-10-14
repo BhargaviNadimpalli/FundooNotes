@@ -16,5 +16,7 @@ namespace FundooManager.Interface
         Task<string> UpdateColor(int noteId, string color);
 
         Task<string> SetRemainder(int notesId, string remainder);
+
+        Task<string> DeleteRemainder(int notesId);
     }
 }

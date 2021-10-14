@@ -77,5 +77,17 @@ namespace FundooManager.Manager
                 throw new Exception(e.Message);
             }
         }
+
+        public Task<string> DeleteRemainder(int notesId)
+        {
+            try
+            {
+                return this.repository.DeleteRemainder(notesId);
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
     }
 }

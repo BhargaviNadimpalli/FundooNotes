@@ -126,5 +126,26 @@ namespace FundooRepository.Repository
                 throw new Exception(e.Message);
             }
         }
-   }
+
+        public async Task<string> DeleteRemainder(int notesId)
+        {
+            try
+            {
+                var exists = this.userContext.notes.Where(x => x.NotesId == notesId).SingleOrDefault();
+                if (exists != null)
+                {
+                    exists.Remainder = null;
+                    this.userContext.notes.Update(exists);
+                    await this.userContext.SaveChangesAsync();
+                    return "Removed Remainder !";
+                }
+
+                return "Note not present!";
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+    }
 }
