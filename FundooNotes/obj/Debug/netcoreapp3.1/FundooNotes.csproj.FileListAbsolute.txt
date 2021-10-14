@@ -67,3 +67,15 @@ C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Ne
 C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\obj\Debug\netcoreapp3.1\FundooNotes.RazorAssemblyInfo.cache
 C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\obj\Debug\netcoreapp3.1\FundooNotes.RazorAssemblyInfo.cs
 C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Experimental.System.Messaging.dll
+C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\System.Net.Http.Formatting.dll
+C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\System.Web.Http.dll
+C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Swashbuckle.Core.dll
+C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\obj\Debug\netcoreapp3.1\FundooNotes.MvcApplicationPartsAssemblyInfo.cs

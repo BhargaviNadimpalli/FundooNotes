@@ -1,4 +1,5 @@
-﻿using FundooModels;
+﻿
+using FundooModels;
 using FundooRepository.Context;
 using FundooRepository.Interface;
 using System;
@@ -33,9 +34,9 @@ namespace FundooRepository.Repository
                     return "Note is Not Added !";
                 }
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                throw new Exception(ex.Message);
+                throw new Exception(e.Message);
             }
         }
     }

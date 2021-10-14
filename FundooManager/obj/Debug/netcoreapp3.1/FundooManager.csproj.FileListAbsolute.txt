@@ -56,3 +56,7 @@ C:\Users\HP\source\felloeship\FundooNotes\FundooManager\obj\Debug\netcoreapp3.1\
 C:\Users\HP\source\felloeship\FundooNotes\FundooManager\obj\Debug\netcoreapp3.1\FundooManager.pdb
 C:\Users\HP\source\felloeship\FundooNotes\FundooManager\obj\Debug\netcoreapp3.1\FundooManager.genruntimeconfig.cache
 C:\Users\HP\source\felloeship\FundooNotes\FundooManager\bin\Debug\netcoreapp3.1\Experimental.System.Messaging.dll
+C:\Users\HP\source\felloeship\FundooNotes\FundooManager\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\HP\source\felloeship\FundooNotes\FundooManager\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Users\HP\source\felloeship\FundooNotes\FundooManager\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Users\HP\source\felloeship\FundooNotes\FundooManager\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll

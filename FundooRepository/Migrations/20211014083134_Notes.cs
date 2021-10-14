@@ -7,11 +7,12 @@ namespace FundooRepository.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Notes",
+                name: "notes",
                 columns: table => new
                 {
                     NotesId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    UserId = table.Column<int>(nullable: false),
                     Title = table.Column<string>(nullable: true),
                     Notes = table.Column<string>(nullable: true),
                     Remainder = table.Column<string>(nullable: true),
@@ -19,14 +20,13 @@ namespace FundooRepository.Migrations
                     Image = table.Column<string>(nullable: true),
                     Is_Archive = table.Column<bool>(nullable: false),
                     Is_Trash = table.Column<bool>(nullable: false),
-                    Is_Pin = table.Column<bool>(nullable: false),
-                    UserId = table.Column<int>(nullable: false)
+                    Is_Pin = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Notes", x => x.NotesId);
+                    table.PrimaryKey("PK_notes", x => x.NotesId);
                     table.ForeignKey(
-                        name: "FK_Notes_Users_UserId",
+                        name: "FK_notes_Users_UserId",
                         column: x => x.UserId,
                         principalTable: "Users",
                         principalColumn: "UserId",
@@ -34,15 +34,15 @@ namespace FundooRepository.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Notes_UserId",
-                table: "Notes",
+                name: "IX_notes_UserId",
+                table: "notes",
                 column: "UserId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Notes");
+                name: "notes");
         }
     }
 }

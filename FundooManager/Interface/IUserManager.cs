@@ -15,5 +15,6 @@ namespace FundooManager.Interface
         string ForgotPassword(string email);
 
         Task<string> ResetPassword(LoginDetails resetpassword);
+        string GenerateToken(string email);
     }
 }

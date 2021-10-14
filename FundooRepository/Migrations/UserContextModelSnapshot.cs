@@ -56,7 +56,7 @@ namespace FundooRepository.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Notes");
+                    b.ToTable("notes");
                 });
 
             modelBuilder.Entity("FundooModels.UserModel", b =>
