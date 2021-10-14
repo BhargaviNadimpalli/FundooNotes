@@ -31,10 +31,8 @@ namespace FundooModels
         [DefaultValue(false)]
         public bool Is_Pin { get; set; }
 
-
-        [ForeignKey("UserModel")]
+        [ForeignKey("UserId")]
         public int UserId { get; set; }
-
-        public virtual UserModel UserModel { get; set; }
+        public UserModel UserModel { get; set; }
     }
 }
