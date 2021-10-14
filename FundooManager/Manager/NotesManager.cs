@@ -31,11 +31,34 @@ namespace FundooManager.Manager
             }
         }
 
+        public List<NotesModel> GetNotes(int userId)
+        {
+            try
+            {
+                return this.repository.GetNotes(userId);
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+
         public Task<string> UpdateNotes(NotesModel model)
         {
             try
             {
                 return this.repository.UpdateNotes(model);
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+        public Task<string> UpdateColor(int noteId, string color)
+        {
+            try
+            {
+                return this.repository.UpdateColor(noteId, color);
             }
             catch (Exception e)
             {
