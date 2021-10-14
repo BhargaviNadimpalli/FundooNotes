@@ -50,7 +50,7 @@ namespace FundooNotes.Controllers
                 {
                     return this.Ok(new ResponseModel<string>() { Status = true, Message = result, Data = login.Email + " Token: " + token });
                 }
-                else
+                else   
                 {
                     return this.BadRequest(new ResponseModel<string>() { Status = false, Message = result });
                 }
