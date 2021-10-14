@@ -11,5 +11,8 @@ namespace FundooManager.Interface
         Task<string> AddNotes(NotesModel model);
 
         Task<string> UpdateNotes(NotesModel model);
+        List<NotesModel> GetNotes(int userId);
+
+        Task<string> UpdateColor(int noteId, string color);
     }
 }

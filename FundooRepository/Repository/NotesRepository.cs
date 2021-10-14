@@ -39,11 +39,29 @@ namespace FundooRepository.Repository
             }
         }
 
+        public List<NotesModel> GetNotes(int userId)
+        {
+            try
+            {
+                var exists = this.userContext.notes.Where(x => x.UserId == userId && x.Is_Trash == false && x.Is_Archive == true).ToList();
+                if (exists != null)
+                {
+                    return exists;
+                }
+
+                return null;
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+
         public async Task<string> UpdateNotes(NotesModel model)
         {
             try
             {
-                var exists = this.userContext.notes.Where(x => x.NotesId == model.NotesId).FirstOrDefault();
+                var exists = this.userContext.notes.Where(x => x.NotesId == model.NotesId).SingleOrDefault();
                 if (exists != null)
                 {
                     exists.Notes = model.Notes;
@@ -60,6 +78,32 @@ namespace FundooRepository.Repository
                 throw new Exception(ex.Message);
             }
         }
+       public async Task<string> UpdateColor(int noteId, string color)
+        {
+            try
+            {
+                var exists = this.userContext.notes.Where(x => x.NotesId == noteId).SingleOrDefault();
+                if (exists != null)
+                {
+                    if (color != null)
+                    {
+                        exists.Color = color;
+                        this.userContext.notes.Update(exists);
+                        await this.userContext.SaveChangesAsync();
+                        return "Color Added Successfully !";
+                    }
+                    else
+                    {
+                        return "Color not Added Successfully !";
+                    }
+                }
 
+                return "Note Not present! Add Note";
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
     }
 }
