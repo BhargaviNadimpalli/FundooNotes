@@ -23,7 +23,7 @@ namespace FundooRepository.Repository
 
             try
             {
-                if (model.Title != null || model.Notes != null || model.Remainder != null)
+                if (model.Title != null || model.Notes != null)
                 {
                     this.userContext.notes.Add(model);
                     await this.userContext.SaveChangesAsync();

@@ -8,14 +8,7 @@ using System.Text;
 namespace FundooModels
 {
     public class NotesModel
-    {
-       
-
-        [ForeignKey("UserId")]
-        public int UserId { get; set; }
-        public UserModel UserModel { get; set; }
-
-       
+    { 
         [Key]
         public int NotesId { get; set; }
 
@@ -44,5 +37,8 @@ namespace FundooModels
         [DefaultValue(false)]
         public bool Is_Pin { get; set; }
 
+        [ForeignKey("UserId")]
+        public int UserId { get; set; }
+        public UserModel UserModel { get; set; }
     }
 }

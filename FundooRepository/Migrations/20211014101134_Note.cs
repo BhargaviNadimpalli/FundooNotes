@@ -2,7 +2,7 @@
 
 namespace FundooRepository.Migrations
 {
-    public partial class Notes : Migration
+    public partial class Note : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -12,7 +12,6 @@ namespace FundooRepository.Migrations
                 {
                     NotesId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    UserId = table.Column<int>(nullable: false),
                     Title = table.Column<string>(nullable: true),
                     Notes = table.Column<string>(nullable: true),
                     Remainder = table.Column<string>(nullable: true),
@@ -20,23 +19,25 @@ namespace FundooRepository.Migrations
                     Image = table.Column<string>(nullable: true),
                     Is_Archive = table.Column<bool>(nullable: false),
                     Is_Trash = table.Column<bool>(nullable: false),
-                    Is_Pin = table.Column<bool>(nullable: false)
+                    Is_Pin = table.Column<bool>(nullable: false),
+                    UserId = table.Column<int>(nullable: false),
+                    UserModelUserId = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_notes", x => x.NotesId);
                     table.ForeignKey(
-                        name: "FK_notes_Users_UserId",
-                        column: x => x.UserId,
+                        name: "FK_notes_Users_UserModelUserId",
+                        column: x => x.UserModelUserId,
                         principalTable: "Users",
                         principalColumn: "UserId",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_notes_UserId",
+                name: "IX_notes_UserModelUserId",
                 table: "notes",
-                column: "UserId");
+                column: "UserModelUserId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

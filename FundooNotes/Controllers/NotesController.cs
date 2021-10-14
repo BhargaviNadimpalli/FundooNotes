@@ -1,5 +1,4 @@
-﻿
-using FundooManager.Interface;
+﻿using FundooManager.Interface;
 using FundooModels;
 using Microsoft.AspNetCore.Mvc;
 using System;
