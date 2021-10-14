@@ -38,5 +38,26 @@ namespace FundooNotes.Controllers
                 return this.NotFound(new ResponseModel<string>() { Status = false, Message = ex.Message });
             }
         }
+        [HttpPut]
+        [Route("api/updateNote")]
+        public async Task<IActionResult> UpdateNotes([FromBody] NotesModel model)
+        {
+            try
+            {
+                string result = await this.manager.UpdateNotes(model);
+                if (result == "Note Updated Successfully !")
+                {
+                    return this.Ok(new ResponseModel<string>() { Status = true, Message = result });
+                }
+                else
+                {
+                    return this.BadRequest(new ResponseModel<string>() { Status = false, Message = result });
+                }
+            }
+            catch (Exception ex)
+            {
+                return this.NotFound(new ResponseModel<string>() { Status = false, Message = ex.Message });
+            }
+        }
     }
 }
