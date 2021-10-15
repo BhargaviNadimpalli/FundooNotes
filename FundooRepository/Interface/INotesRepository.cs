@@ -23,6 +23,8 @@ namespace FundooRepository.Interface
 
         Task<string> AddArchive(int notesId);
 
+        Task<string> DeleteNoteAddToTrash(int notesId);
+
 
     }
 }

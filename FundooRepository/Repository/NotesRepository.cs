@@ -227,5 +227,40 @@ namespace FundooRepository.Repository
                 throw new Exception(e.Message);
             }
         }
+
+        public async Task<string> DeleteNoteAddToTrash(int notesId)
+        {
+            try
+            {
+                var exists = this.userContext.notes.Where(x => x.NotesId == notesId && x.Is_Trash == false).SingleOrDefault();
+                string message = string.Empty;
+                if (exists != null)
+                {
+                    exists.Is_Trash = true;
+                    message = "Note trashed";
+
+                    if (exists.Is_Pin == true)
+                    {
+                        exists.Is_Pin = false;
+                        message = "Note unpinned and trashed";
+                    }
+
+                    exists.Remainder = null;
+                    this.userContext.notes.Update(exists);
+                    await this.userContext.SaveChangesAsync();
+                }
+                else
+                {
+                    message = "Note is Not present! Add Note";
+                }
+
+                return message;
+            }
+            catch (ArgumentNullException ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+        }
     }
 }

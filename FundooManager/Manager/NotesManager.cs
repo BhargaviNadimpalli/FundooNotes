@@ -113,5 +113,17 @@ namespace FundooManager.Manager
                 throw new Exception(e.Message);
             }
         }
+
+        public Task<string> DeleteNoteAddToTrash(int notesId)
+        {
+            try
+            {
+                return this.repository.DeleteNoteAddToTrash(notesId);
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
     }
 }
