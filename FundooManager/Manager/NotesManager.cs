@@ -89,5 +89,17 @@ namespace FundooManager.Manager
                 throw new Exception(e.Message);
             }
         }
+
+        public Task<string> AddPin(int notesId)
+        {
+            try
+            {
+                return this.repository.AddPin(notesId);
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
     }
 }

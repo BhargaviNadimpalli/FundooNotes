@@ -19,5 +19,8 @@ namespace FundooRepository.Interface
         Task<string> SetRemainder(int notesId, string remainder);
         Task<string> DeleteRemainder(int notesId);
 
+        Task<string> AddPin(int notesId);
+
+
     }
 }

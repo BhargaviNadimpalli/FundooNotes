@@ -143,5 +143,26 @@ namespace FundooNotes.Controllers
                 return this.NotFound(new ResponseModel<string> { Status = false, Message = ex.Message });
             }
         }
+        [HttpPut]
+        [Route("api/addPin")]
+        public async Task<IActionResult> AddPin(int notesId)
+        {
+            try
+            {
+                string result = await this.manager.AddPin(notesId);
+                if (result != "Note is Not present! Add Note")
+                {
+                    return this.Ok(new ResponseModel<string>() { Status = true, Message = result });
+                }
+                else
+                { 
+                    return this.BadRequest(new ResponseModel<string>() { Status = false, Message = result });
+                }
+            }
+            catch (Exception ex)
+            {
+                return this.NotFound(new ResponseModel<string>() { Status = false, Message = ex.Message });
+            }
+        }
     }
 }
