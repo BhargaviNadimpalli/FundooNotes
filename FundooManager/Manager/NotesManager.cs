@@ -125,5 +125,17 @@ namespace FundooManager.Manager
                 throw new Exception(e.Message);
             }
         }
+
+        public Task<string> RestoreFromTrash(int notesId)
+        {
+            try
+            {
+                return this.repository.RestoreFromTrash(notesId);
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
     }
 }

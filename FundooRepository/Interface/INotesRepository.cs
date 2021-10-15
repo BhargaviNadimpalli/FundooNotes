@@ -25,6 +25,7 @@ namespace FundooRepository.Interface
 
         Task<string> DeleteNoteAddToTrash(int notesId);
 
+        Task<string> RestoreFromTrash(int notesId);
 
     }
 }

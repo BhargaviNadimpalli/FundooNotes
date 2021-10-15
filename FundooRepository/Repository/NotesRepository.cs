@@ -262,5 +262,26 @@ namespace FundooRepository.Repository
             }
 
         }
+
+        public async Task<string> RestoreFromTrash(int notesId)
+        {
+            try
+            {
+                var exists = this.userContext.notes.Where(x => x.NotesId == notesId && x.Is_Trash == true).SingleOrDefault();
+                if (exists != null)
+                {
+                    exists.Is_Trash = false;
+                    this.userContext.notes.Update(exists);
+                    await this.userContext.SaveChangesAsync();
+                    return "Removed from trash !";
+                }
+
+                return "Note is not present in trash";
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
     }
 }
