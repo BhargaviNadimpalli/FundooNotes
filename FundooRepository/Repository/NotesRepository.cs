@@ -187,5 +187,45 @@ namespace FundooRepository.Repository
                 throw new Exception(e.Message);
             }
         }
+
+        public async Task<string> AddArchive(int notesId)
+        {
+            try
+            {
+                var exists = this.userContext.notes.Where(x => x.NotesId == notesId).SingleOrDefault();
+                string message = string.Empty;
+                if (exists != null)
+                {
+                    if (exists.Is_Archive == true)
+                    {
+                        exists.Is_Archive = false;
+                        message = "Note unarchived";
+                    }
+                    else
+                    {
+                        exists.Is_Archive = true;
+                        message = "Note archived";
+                        if (exists.Is_Pin == true)
+                        {
+                            exists.Is_Pin = false;
+                            message = "Note unpinned and archived";
+                        }
+                    }
+
+                    this.userContext.notes.Update(exists);
+                    await this.userContext.SaveChangesAsync();
+                }
+                else
+                {
+                    message = "Note is Not present! Add Note";
+                }
+
+                return message;
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
     }
 }

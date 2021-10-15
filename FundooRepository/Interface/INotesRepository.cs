@@ -21,6 +21,8 @@ namespace FundooRepository.Interface
 
         Task<string> AddPin(int notesId);
 
+        Task<string> AddArchive(int notesId);
+
 
     }
 }

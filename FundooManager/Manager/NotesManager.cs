@@ -101,5 +101,17 @@ namespace FundooManager.Manager
                 throw new Exception(e.Message);
             }
         }
+
+        public Task<string> AddArchive(int notesId)
+        {
+            try
+            {
+                return this.repository.AddArchive(notesId);
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
     }
 }

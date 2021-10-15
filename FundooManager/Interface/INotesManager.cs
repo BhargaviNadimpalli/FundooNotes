@@ -20,5 +20,7 @@ namespace FundooManager.Interface
         Task<string> DeleteRemainder(int notesId);
 
         Task<string> AddPin(int notesId);
+
+        Task<string> AddArchive(int notesId);
     }
 }
