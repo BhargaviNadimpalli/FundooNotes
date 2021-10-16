@@ -22,7 +22,7 @@ namespace FundooRepository.Repository
 
             try
             {
-                if (model.Title != null || model.Notes != null)
+                if (model.Title != null || model.Notes != null || model.Remainder != null)
                 {
                     this.userContext.notes.Add(model);
                     await this.userContext.SaveChangesAsync();
@@ -39,24 +39,7 @@ namespace FundooRepository.Repository
             }
         }
 
-        public List<NotesModel> GetNotes(int userId)
-        {
-            try
-            {
-                var exists = this.userContext.notes.Where(x => x.UserId == userId && x.Is_Trash == false && x.Is_Archive == true).ToList();
-                if (exists != null)
-                {
-                    return exists;
-                }
-
-                return null;
-            }
-            catch (Exception e)
-            {
-                throw new Exception(e.Message);
-            }
-        }
-
+        
         public async Task<string> UpdateNotes(NotesModel model)
         {
             try
@@ -73,9 +56,9 @@ namespace FundooRepository.Repository
 
                 return "Note is Not present. Add Note";
             }
-            catch (ArgumentNullException ex)
+            catch (Exception e)
             {
-                throw new Exception(ex.Message);
+                throw new Exception(e.Message);
             }
         }
        public async Task<string> UpdateColor(int noteId, string color)
@@ -148,7 +131,7 @@ namespace FundooRepository.Repository
             }
         }
 
-        public async Task<string> AddPin(int notesId)
+        public async Task<string> UpdatePin(int notesId)
         {
             try
             {
@@ -188,7 +171,7 @@ namespace FundooRepository.Repository
             }
         }
 
-        public async Task<string> AddArchive(int notesId)
+        public async Task<string> UpdateArchive(int notesId)
         {
             try
             {
@@ -256,9 +239,9 @@ namespace FundooRepository.Repository
 
                 return message;
             }
-            catch (ArgumentNullException ex)
+            catch (Exception e)
             {
-                throw new Exception(ex.Message);
+                throw new Exception(e.Message);
             }
 
         }
@@ -283,5 +266,42 @@ namespace FundooRepository.Repository
                 throw new Exception(e.Message);
             }
         }
+
+        public List<NotesModel> GetNotes(int userId)
+        {
+            try
+            {
+                var exists = this.userContext.notes.Where(x => x.UserId == userId && x.Is_Trash == false && x.Is_Archive == true).ToList();
+                if (exists != null)
+                {
+                    return exists;
+                }
+
+                return null;
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+
+        public List<NotesModel> GetRemainderNotes(int userId)
+        {
+            try
+            {
+                var exists = this.userContext.notes.Where(x => x.UserId == userId && x.Is_Trash == false && x.Remainder != null).ToList();
+                if (exists != null)
+                {
+                    return exists;
+                }
+
+                return null;
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+
     }
 }

@@ -90,11 +90,11 @@ namespace FundooManager.Manager
             }
         }
 
-        public Task<string> AddPin(int notesId)
+        public Task<string> UpdatePin(int notesId)
         {
             try
             {
-                return this.repository.AddPin(notesId);
+                return this.repository.UpdatePin(notesId);
             }
             catch (Exception e)
             {
@@ -102,11 +102,11 @@ namespace FundooManager.Manager
             }
         }
 
-        public Task<string> AddArchive(int notesId)
+        public Task<string> UpdateArchive(int notesId)
         {
             try
             {
-                return this.repository.AddArchive(notesId);
+                return this.repository.UpdateArchive(notesId);
             }
             catch (Exception e)
             {
@@ -131,6 +131,19 @@ namespace FundooManager.Manager
             try
             {
                 return this.repository.RestoreFromTrash(notesId);
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+
+        public List<NotesModel> GetRemainderNotes(int userId)
+        {
+
+            try
+            {
+                return this.repository.GetRemainderNotes(userId);
             }
             catch (Exception e)
             {

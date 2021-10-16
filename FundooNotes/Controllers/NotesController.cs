@@ -145,11 +145,11 @@ namespace FundooNotes.Controllers
         }
         [HttpPut]
         [Route("api/addPin")]
-        public async Task<IActionResult> AddPin(int notesId)
+        public async Task<IActionResult> UpdatePin(int notesId)
         {
             try
             {
-                string result = await this.manager.AddPin(notesId);
+                string result = await this.manager.UpdatePin(notesId);
                 if (result != "Note is Not present! Add Note")
                 {
                     return this.Ok(new ResponseModel<string>() { Status = true, Message = result });
@@ -170,7 +170,7 @@ namespace FundooNotes.Controllers
         {
             try
             {
-                string result = await this.manager.AddArchive(notesId);
+                string result = await this.manager.UpdateArchive(notesId);
                 if (result != "Note is Not present! Add Note")
                 {
                     return this.Ok(new ResponseModel<string>() { Status = true, Message = result });
