@@ -19,7 +19,7 @@ namespace FundooModels
         public NotesModel notesModel { get; set; }
 
         
-        [Required]
+        [Required]     
         public string ColEmail { get; set; }
     }
 }

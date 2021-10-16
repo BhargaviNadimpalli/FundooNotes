@@ -302,6 +302,5 @@ namespace FundooRepository.Repository
                 throw new Exception(e.Message);
             }
         }
-
     }
 }
