@@ -22,7 +22,7 @@ namespace FundooRepository.Repository
 
             try
             {
-                if (model.Title != null || model.Notes != null)
+                if (model.Title != null || model.Notes != null || model.Remainder != null)
                 {
                     this.userContext.notes.Add(model);
                     await this.userContext.SaveChangesAsync();
@@ -39,24 +39,7 @@ namespace FundooRepository.Repository
             }
         }
 
-        public List<NotesModel> GetNotes(int userId)
-        {
-            try
-            {
-                var exists = this.userContext.notes.Where(x => x.UserId == userId && x.Is_Trash == false && x.Is_Archive == true).ToList();
-                if (exists != null)
-                {
-                    return exists;
-                }
-
-                return null;
-            }
-            catch (Exception e)
-            {
-                throw new Exception(e.Message);
-            }
-        }
-
+        
         public async Task<string> UpdateNotes(NotesModel model)
         {
             try
@@ -73,9 +56,9 @@ namespace FundooRepository.Repository
 
                 return "Note is Not present. Add Note";
             }
-            catch (ArgumentNullException ex)
+            catch (Exception e)
             {
-                throw new Exception(ex.Message);
+                throw new Exception(e.Message);
             }
         }
        public async Task<string> UpdateColor(int noteId, string color)
@@ -148,7 +131,7 @@ namespace FundooRepository.Repository
             }
         }
 
-        public async Task<string> AddPin(int notesId)
+        public async Task<string> UpdatePin(int notesId)
         {
             try
             {
@@ -187,5 +170,138 @@ namespace FundooRepository.Repository
                 throw new Exception(e.Message);
             }
         }
+
+        public async Task<string> UpdateArchive(int notesId)
+        {
+            try
+            {
+                var exists = this.userContext.notes.Where(x => x.NotesId == notesId).SingleOrDefault();
+                string message = string.Empty;
+                if (exists != null)
+                {
+                    if (exists.Is_Archive == true)
+                    {
+                        exists.Is_Archive = false;
+                        message = "Note unarchived";
+                    }
+                    else
+                    {
+                        exists.Is_Archive = true;
+                        message = "Note archived";
+                        if (exists.Is_Pin == true)
+                        {
+                            exists.Is_Pin = false;
+                            message = "Note unpinned and archived";
+                        }
+                    }
+
+                    this.userContext.notes.Update(exists);
+                    await this.userContext.SaveChangesAsync();
+                }
+                else
+                {
+                    message = "Note is Not present! Add Note";
+                }
+
+                return message;
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+
+        public async Task<string> DeleteNoteAddToTrash(int notesId)
+        {
+            try
+            {
+                var exists = this.userContext.notes.Where(x => x.NotesId == notesId && x.Is_Trash == false).SingleOrDefault();
+                string message = string.Empty;
+                if (exists != null)
+                {
+                    exists.Is_Trash = true;
+                    message = "Note trashed";
+
+                    if (exists.Is_Pin == true)
+                    {
+                        exists.Is_Pin = false;
+                        message = "Note unpinned and trashed";
+                    }
+
+                    exists.Remainder = null;
+                    this.userContext.notes.Update(exists);
+                    await this.userContext.SaveChangesAsync();
+                }
+                else
+                {
+                    message = "Note is Not present! Add Note";
+                }
+
+                return message;
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+
+        }
+
+        public async Task<string> RestoreFromTrash(int notesId)
+        {
+            try
+            {
+                var exists = this.userContext.notes.Where(x => x.NotesId == notesId && x.Is_Trash == true).SingleOrDefault();
+                if (exists != null)
+                {
+                    exists.Is_Trash = false;
+                    this.userContext.notes.Update(exists);
+                    await this.userContext.SaveChangesAsync();
+                    return "Removed from trash !";
+                }
+
+                return "Note is not present in trash";
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+
+        public List<NotesModel> GetNotes(int userId)
+        {
+            try
+            {
+                var exists = this.userContext.notes.Where(x => x.UserId == userId && x.Is_Trash == false && x.Is_Archive == true).ToList();
+                if (exists != null)
+                {
+                    return exists;
+                }
+
+                return null;
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+
+        public List<NotesModel> GetRemainderNotes(int userId)
+        {
+            try
+            {
+                var exists = this.userContext.notes.Where(x => x.UserId == userId && x.Is_Trash == false && x.Remainder != null).ToList();
+                if (exists != null)
+                {
+                    return exists;
+                }
+
+                return null;
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+
     }
 }

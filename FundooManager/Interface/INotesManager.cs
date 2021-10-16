@@ -19,6 +19,14 @@ namespace FundooManager.Interface
 
         Task<string> DeleteRemainder(int notesId);
 
-        Task<string> AddPin(int notesId);
+        Task<string> UpdatePin(int notesId);
+
+        Task<string> UpdateArchive(int notesId);
+
+        Task<string> DeleteNoteAddToTrash(int notesId);
+
+        Task<string> RestoreFromTrash(int notesId);
+
+        List<NotesModel> GetRemainderNotes(int userId);
     }
 }
