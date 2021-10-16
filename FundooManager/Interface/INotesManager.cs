@@ -28,5 +28,9 @@ namespace FundooManager.Interface
         Task<string> RestoreFromTrash(int notesId);
 
         List<NotesModel> GetRemainderNotes(int userId);
+
+        List<NotesModel> GetArchiveNotes(int userId);
+
+        List<NotesModel> GetTrashNotes(int userId);
     }
 }

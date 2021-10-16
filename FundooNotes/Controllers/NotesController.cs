@@ -228,5 +228,74 @@ namespace FundooNotes.Controllers
             }
         }
 
+        [HttpPost]
+        [Route("api/GetRemainderNotes")]
+        public IActionResult GetRemainderNotes(int userId)
+        {
+            try
+            {
+                var result = this.manager.GetRemainderNotes(userId);
+
+                if (result.Count > 0)
+                {
+                    return this.Ok(new ResponseModel<List<NotesModel>>() { Status = true, Message = "Retrieved Successfully", Data = result });
+                }
+                else
+                {
+                    return this.BadRequest(new ResponseModel<string>() { Status = false, Message = "Retrieval Failed" });
+                }
+            }
+            catch (Exception ex)
+            {
+                return this.NotFound(new ResponseModel<string> { Status = false, Message = ex.Message });
+            }
+        }
+
+
+        [HttpPost]
+        [Route("api/GetArchiveNotes")]
+        public IActionResult GetArchiveNotes(int userId)
+        {
+            try
+            {
+                var result = this.manager.GetArchiveNotes(userId);
+
+                if (result.Count > 0)
+                {
+                    return this.Ok(new ResponseModel<List<NotesModel>>() { Status = true, Message = "Retrieved Successfully", Data = result });
+                }
+                else
+                {
+                    return this.BadRequest(new ResponseModel<string>() { Status = false, Message = "Retrieval Failed" });
+                }
+            }
+            catch (Exception ex)
+            {
+                return this.NotFound(new ResponseModel<string> { Status = false, Message = ex.Message });
+            }
+        }
+
+        [HttpPost]
+        [Route("api/GetTrashNotes")]
+        public IActionResult GetTrashNotes(int userId)
+        {
+            try
+            {
+                var result = this.manager.GetTrashNotes(userId);
+
+                if (result.Count > 0)
+                {
+                    return this.Ok(new ResponseModel<List<NotesModel>>() { Status = true, Message = "Retrieved Successfully", Data = result });
+                }
+                else
+                {
+                    return this.BadRequest(new ResponseModel<string>() { Status = false, Message = "Retrieval Failed" });
+                }
+            }
+            catch (Exception ex)
+            {
+                return this.NotFound(new ResponseModel<string> { Status = false, Message = ex.Message });
+            }
+        }
     }
 }

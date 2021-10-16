@@ -29,5 +29,9 @@ namespace FundooRepository.Interface
 
         List<NotesModel> GetRemainderNotes(int userId);
 
+        List<NotesModel> GetArchiveNotes(int userId);
+
+        List<NotesModel> GetTrashNotes(int userId);
+
     }
 }
