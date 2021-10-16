@@ -16,7 +16,7 @@ namespace FundooRepository.Migrations
                     ColEmail = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
-                {
+                {      
                     table.PrimaryKey("PK_models", x => x.ColId);
                     table.ForeignKey(
                         name: "FK_models_notes_NotesId",

@@ -11,7 +11,7 @@ namespace FundooRepository.Context
         public DbSet<UserModel> Users { get; set; }
         public DbSet<NotesModel> notes { get; set; }
 
-        public DbSet<CollaboratorModel> models { get; set; }
+        public DbSet<CollaboratorModel> models { get; set; }     
         public UserContext(DbContextOptions options) : base(options)
         {
           
