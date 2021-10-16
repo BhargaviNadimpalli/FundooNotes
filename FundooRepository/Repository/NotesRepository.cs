@@ -302,5 +302,41 @@ namespace FundooRepository.Repository
                 throw new Exception(e.Message);
             }
         }
+
+        public List<NotesModel> GetArchiveNotes(int userId)
+        {
+            try
+            {
+                var exists = this.userContext.notes.Where(x => x.UserId == userId && x.Is_Trash == false && x.Is_Archive == true).ToList();
+                if (exists != null)
+                {
+                    return exists;
+                }
+
+                return null;
+            }
+            catch (ArgumentNullException ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public List<NotesModel> GetTrashNotes(int userId)
+        {
+            try
+            {
+                var exists = this.userContext.notes.Where(x => x.UserId == userId && x.Is_Trash == true).ToList();
+                if (exists != null)
+                {
+                    return exists;
+                }
+
+                return null;
+            }
+            catch (ArgumentNullException ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
     }
 }

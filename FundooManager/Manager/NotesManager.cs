@@ -150,5 +150,29 @@ namespace FundooManager.Manager
                 throw new Exception(e.Message);
             }
         }
+
+        public List<NotesModel> GetArchiveNotes(int userId)
+        {
+            try
+            {
+                return this.repository.GetArchiveNotes(userId);
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+
+        public List<NotesModel> GetTrashNotes(int userId)
+        {
+            try
+            {
+                return this.repository.GetTrashNotes(userId);
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
     }
 }
