@@ -10,5 +10,8 @@ namespace FundooRepository.Interface
         string AddLabel(LabelModel labelModel);
 
         string DeleteLabel(int userId, string labelName);
+
+        string EditLabel(int userId, string labelName, string newLabelName);
+
     }
 }

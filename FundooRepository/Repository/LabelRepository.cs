@@ -56,5 +56,32 @@ namespace FundooRepository.Repository
                 throw new Exception(ex.Message);
             }
         }
+
+        public string EditLabel(int userId, string labelName, string newLabelName)
+        {
+            try
+            {
+                var exist = this.userContext.labels.Where(x => x.LabelName == labelName && x.UserId == userId).ToList();
+                var labelExists = this.userContext.labels.Where(x => x.LabelName == newLabelName && x.UserId == userId).ToList();
+                if (exist.Count > 0)
+                {
+                    exist.ForEach(x => x.LabelName = newLabelName);
+                    this.userContext.labels.UpdateRange(exist);
+                    this.userContext.SaveChanges();
+                    if (labelExists.Count > 0)
+                    {
+                        return "Updated Label";
+                    }
+
+                    return "Updated Label";
+                }
+
+                return "Label not present";
+            }
+            catch (ArgumentNullException ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
     }
 }

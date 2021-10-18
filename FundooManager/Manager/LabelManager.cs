@@ -37,5 +37,17 @@ namespace FundooManager.Manager
                 throw new Exception(e.Message);
             }
         }
+
+        public string EditLabel(int userId, string labelName, string newLabelName)
+        {
+            try
+            {
+                return this.repository.EditLabel(userId, labelName, newLabelName);
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
     }
 }
