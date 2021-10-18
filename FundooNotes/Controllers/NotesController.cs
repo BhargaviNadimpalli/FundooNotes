@@ -1,5 +1,6 @@
 ﻿using FundooManager.Interface;
 using FundooModels;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -17,8 +18,9 @@ namespace FundooNotes.Controllers
         {
             this.manager = manager;
         }
+
         [HttpPost]
-        [Route("api/addNote")]
+        [Route("api/addNote")] 
         public async Task<IActionResult> AddNotes([FromBody] NotesModel model)
         {
             try
@@ -228,5 +230,122 @@ namespace FundooNotes.Controllers
             }
         }
 
+        [HttpPost]
+        [Route("api/GetRemainderNotes")]
+        public IActionResult GetRemainderNotes(int userId)
+        {
+            try
+            {
+                var result = this.manager.GetRemainderNotes(userId);
+
+                if (result.Count > 0)
+                {
+                    return this.Ok(new ResponseModel<List<NotesModel>>() { Status = true, Message = "Retrieved Successfully", Data = result });
+                }
+                else
+                {
+                    return this.BadRequest(new ResponseModel<string>() { Status = false, Message = "Retrieval Failed" });
+                }
+            }
+            catch (Exception ex)
+            {
+                return this.NotFound(new ResponseModel<string> { Status = false, Message = ex.Message });
+            }
+        }
+
+
+        [HttpPost]
+        [Route("api/GetArchiveNotes")]
+        public IActionResult GetArchiveNotes(int userId)
+        {
+            try
+            {
+                var result = this.manager.GetArchiveNotes(userId);
+
+                if (result.Count > 0)
+                {
+                    return this.Ok(new ResponseModel<List<NotesModel>>() { Status = true, Message = "Retrieved Successfully", Data = result });
+                }
+                else
+                {
+                    return this.BadRequest(new ResponseModel<string>() { Status = false, Message = "Retrieval Failed" });
+                }
+            }
+            catch (Exception ex)
+            {
+                return this.NotFound(new ResponseModel<string> { Status = false, Message = ex.Message });
+            }
+        }
+
+        [HttpPost]
+        [Route("api/GetTrashNotes")]
+        public IActionResult GetTrashNotes(int userId)
+        {
+            try
+            {
+                var result = this.manager.GetTrashNotes(userId);
+
+                if (result.Count > 0)
+                {
+                    return this.Ok(new ResponseModel<List<NotesModel>>() { Status = true, Message = "Retrieved Successfully", Data = result });
+                }
+                else
+                {
+                    return this.BadRequest(new ResponseModel<string>() { Status = false, Message = "Retrieval Failed" });
+                }
+            }
+            catch (Exception ex)
+            {
+                return this.NotFound(new ResponseModel<string> { Status = false, Message = ex.Message });
+            }
+        }
+        [HttpPost]
+        [Route("Image")]
+        public IActionResult AddImage(int notesId, IFormFile image)
+        {
+            try
+            {
+                
+                var result = this.manager.AddImage(notesId, image);
+
+                if (result.Equals("Image added successfully"))
+                {
+                    return Ok(new { Success = true, message = result });
+                }
+                else
+                {
+                    return BadRequest(new { Success = false, message = result });
+                }
+            }
+            catch (Exception e)
+            {
+                return BadRequest(new { success = false, message = e.Message });
+
+            }
+        }
+        [HttpDelete]
+        [Route("Image")]
+        public IActionResult RemoveImage(int notesId)
+        {
+            try
+            {
+                var result = this.manager.RemoveImage(notesId);
+
+                if (result.Equals("Image deleted successfully"))
+                {
+                    return Ok(new { Success = true, message = result });
+                }
+                else
+                {
+                    return BadRequest(new { Success = false, message = result });
+                }
+            }
+            catch (Exception e)
+            {
+                return BadRequest(new { success = false, message = e.Message });
+
+
+            }
+        }
     }
 }

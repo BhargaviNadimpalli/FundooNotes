@@ -2,6 +2,7 @@
 using FundooManager.Interface;
 using FundooModels;
 using FundooRepository.Interface;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -144,6 +145,53 @@ namespace FundooManager.Manager
             try
             {
                 return this.repository.GetRemainderNotes(userId);
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+
+        public List<NotesModel> GetArchiveNotes(int userId)
+        {
+            try
+            {
+                return this.repository.GetArchiveNotes(userId);
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+
+        public List<NotesModel> GetTrashNotes(int userId)
+        {
+            try
+            {
+                return this.repository.GetTrashNotes(userId);
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+
+        public string AddImage(int notesId, IFormFile image)
+        {
+            try
+            {
+                return this.repository.AddImage(notesId, image);
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+        public string RemoveImage(int notesId)
+        {
+            try
+            {
+                return this.repository.RemoveImage(notesId);
             }
             catch (Exception e)
             {

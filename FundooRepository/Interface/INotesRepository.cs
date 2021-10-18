@@ -1,4 +1,5 @@
 ﻿using FundooModels;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -28,6 +29,13 @@ namespace FundooRepository.Interface
         Task<string> RestoreFromTrash(int notesId);
 
         List<NotesModel> GetRemainderNotes(int userId);
+
+        List<NotesModel> GetArchiveNotes(int userId);
+
+        List<NotesModel> GetTrashNotes(int userId);
+
+        string AddImage(int notesId, IFormFile image);
+        string RemoveImage(int notesId);
 
     }
 }
