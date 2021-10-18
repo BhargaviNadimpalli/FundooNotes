@@ -61,5 +61,25 @@ namespace FundooRepository.Repository
                 throw new Exception(ex.Message);
             }
         }
+
+        public string RemoveCollaborator(int colId)
+        {
+            try
+            {
+                var colExists = this.userContext.collaborators.Where(x => x.ColId == colId).FirstOrDefault();
+                if (colExists != null)
+                {
+                    this.userContext.collaborators.Remove(colExists);
+                    this.userContext.SaveChanges();
+                    return "Removed Collaborator";
+                }
+
+                return "Cant Remove Collaborator";
+            }
+            catch (ArgumentNullException ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
     }
 }

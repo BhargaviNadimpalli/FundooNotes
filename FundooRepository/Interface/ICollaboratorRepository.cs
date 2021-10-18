@@ -9,6 +9,7 @@ namespace FundooRepository.Interface
     {
         string AddCollaborator(CollaboratorModel collaborator);
 
+        string RemoveCollaborator(int colId);
 
     }
 }

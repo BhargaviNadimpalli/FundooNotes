@@ -25,5 +25,17 @@ namespace FundooManager.Manager
                 throw new Exception(e.Message);
             }
         }
+
+        public string RemoveCollaborator(int colId)
+        {
+            try
+            {
+                return this.repository.RemoveCollaborator(colId);
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
     }
 }
