@@ -9,6 +9,10 @@ using System.Net.Mail;
 using System.Threading.Tasks;
 using Experimental.System.Messaging;
 using System.Net;
+using Microsoft.IdentityModel.Tokens;
+using System.Security.Claims;
+using System.IdentityModel.Tokens.Jwt;
+using Microsoft.Extensions.Configuration;
 
 namespace FundooRepository.Repository
 {
@@ -16,9 +20,12 @@ namespace FundooRepository.Repository
     {
         private readonly UserContext userContext;
 
-        public UserRepository(UserContext userContext)
+        private readonly IConfiguration configuration;
+
+        public UserRepository(UserContext userContext, IConfiguration configuration)
         {
             this.userContext = userContext;
+            this.configuration = configuration;
         }
         public async Task<string> Register(UserModel user)
         {
@@ -173,6 +180,23 @@ namespace FundooRepository.Repository
             {
                 throw new Exception(e.Message);
             }
+        }
+        public string GenerateToken(string email)
+        {
+            byte[] key = Encoding.UTF8.GetBytes(this.configuration["SecretKey"]);
+            SymmetricSecurityKey securityKey = new SymmetricSecurityKey(key);
+            SecurityTokenDescriptor descriptor = new SecurityTokenDescriptor
+            {
+                Subject = new ClaimsIdentity(new[]
+                {
+                new Claim(ClaimTypes.Email, email)
+            }),
+                Expires = DateTime.UtcNow.AddMinutes(30),
+                SigningCredentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256Signature)
+            };
+            JwtSecurityTokenHandler handler = new JwtSecurityTokenHandler();
+            JwtSecurityToken token = handler.CreateJwtSecurityToken(descriptor);
+            return handler.WriteToken(token);
         }
     }
 }

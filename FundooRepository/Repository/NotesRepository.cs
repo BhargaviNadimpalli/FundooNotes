@@ -1,6 +1,10 @@
-﻿using FundooModels;
+﻿using CloudinaryDotNet;
+using CloudinaryDotNet.Actions;
+using FundooModels;
 using FundooRepository.Context;
 using FundooRepository.Interface;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,12 +13,14 @@ using System.Threading.Tasks;
 
 namespace FundooRepository.Repository
 {
-   public class NotesRepository : INotesRepository
+    public class NotesRepository : INotesRepository
     {
         private readonly UserContext userContext;
-        public NotesRepository(UserContext userContext)
+        private readonly IConfiguration configuration;
+        public NotesRepository(UserContext userContext, IConfiguration configuration)
         {
             this.userContext = userContext;
+            this.configuration = configuration;
         }
 
         public async Task<string> AddNotes(NotesModel model)
@@ -39,7 +45,7 @@ namespace FundooRepository.Repository
             }
         }
 
-        
+
         public async Task<string> UpdateNotes(NotesModel model)
         {
             try
@@ -61,7 +67,7 @@ namespace FundooRepository.Repository
                 throw new Exception(e.Message);
             }
         }
-       public async Task<string> UpdateColor(int noteId, string color)
+        public async Task<string> UpdateColor(int noteId, string color)
         {
             try
             {
@@ -334,6 +340,53 @@ namespace FundooRepository.Repository
                 return null;
             }
             catch (ArgumentNullException ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+
+        public string AddImage(int notesId, IFormFile image)
+        {
+            try
+            {
+                var noteData = this.userContext.notes.Find(notesId);
+                if (noteData != null)
+                {
+                    Account account = new Account(configuration["CloudinaryAccount:CloudName"], configuration["CloudinaryAccount:ApiKey"], configuration["CloudinaryAccount:ApiSecret"]);
+                    Cloudinary cloudinary = new Cloudinary(account);
+                    ImageUploadParams uploadParams = new ImageUploadParams()
+                    {
+                        File = new FileDescription(image.FileName, image.OpenReadStream())
+                    };
+                    var uploadResult = cloudinary.Upload(uploadParams);
+                    noteData.Image = uploadResult.Url.ToString();
+                    this.userContext.SaveChanges();
+                    return "Image added successfully";
+                }
+                return "Image is not added";
+            }
+            catch (ArgumentNullException ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public string RemoveImage(int notesId)
+        {
+            try
+            {
+                var noteData = this.userContext.notes.Find(notesId);
+                if (noteData != null)
+                {
+                    noteData.Image = null;
+                    this.userContext.SaveChanges();
+
+                    return "Image deleted successfully";
+                }
+                return "Image is not deleted";
+            }
+            catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }

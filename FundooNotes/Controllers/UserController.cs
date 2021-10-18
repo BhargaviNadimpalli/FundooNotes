@@ -41,13 +41,14 @@ namespace FundooNotes.Controllers
         [HttpPost]
         [Route("api/login")]
         public IActionResult Login([FromBody] LoginDetails login)
-        {                
+        {
             try
             {
                 string result = this.manager.Login(login);
+                string token = this.manager.GenerateToken(login.Email);
                 if (result.Equals("Login is successful"))
                 {
-                    return this.Ok(new ResponseModel<string>() { Status = true, Message = "Login is completed" });
+                    return this.Ok(new ResponseModel<string>() { Status = true, Message = result, Data = login.Email + " Token: " + token });
                 }
                 else
                 {

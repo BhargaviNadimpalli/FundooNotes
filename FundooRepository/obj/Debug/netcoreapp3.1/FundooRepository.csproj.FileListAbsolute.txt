@@ -51,3 +51,16 @@ C:\Users\HP\source\felloeship\FundooNotes\FundooRepository\obj\Debug\netcoreapp3
 C:\Users\HP\source\felloeship\FundooNotes\FundooRepository\obj\Debug\netcoreapp3.1\FundooRepository.pdb
 C:\Users\HP\source\felloeship\FundooNotes\FundooRepository\obj\Debug\netcoreapp3.1\FundooRepository.genruntimeconfig.cache
 C:\Users\HP\source\felloeship\FundooNotes\FundooRepository\bin\Debug\netcoreapp3.1\Experimental.System.Messaging.dll
+C:\Users\HP\source\felloeship\FundooNotes\FundooRepository\bin\Debug\netcoreapp3.1\CloudinaryDotNet.dll
+C:\Users\HP\source\felloeship\FundooNotes\FundooRepository\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Html.Abstractions.dll
+C:\Users\HP\source\felloeship\FundooNotes\FundooRepository\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Users\HP\source\felloeship\FundooNotes\FundooRepository\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\HP\source\felloeship\FundooNotes\FundooRepository\bin\Debug\netcoreapp3.1\Microsoft.Extensions.WebEncoders.dll
+C:\Users\HP\source\felloeship\FundooNotes\FundooRepository\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\HP\source\felloeship\FundooNotes\FundooRepository\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Users\HP\source\felloeship\FundooNotes\FundooRepository\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Users\HP\source\felloeship\FundooNotes\FundooRepository\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\HP\source\felloeship\FundooNotes\FundooRepository\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\HP\source\felloeship\FundooNotes\FundooRepository\bin\Debug\netcoreapp3.1\System.IO.Pipelines.dll
+C:\Users\HP\source\felloeship\FundooNotes\FundooRepository\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\HP\source\felloeship\FundooNotes\FundooRepository\bin\Debug\netcoreapp3.1\System.Text.Encodings.Web.dll
