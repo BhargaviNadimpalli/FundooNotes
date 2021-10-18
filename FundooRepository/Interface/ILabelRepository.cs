@@ -13,5 +13,7 @@ namespace FundooRepository.Interface
 
         string EditLabel(int userId, string labelName, string newLabelName);
 
+        List<string> GetLabel(int userId);
+
     }
 }

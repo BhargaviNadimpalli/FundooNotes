@@ -83,5 +83,23 @@ namespace FundooRepository.Repository
                 throw new Exception(ex.Message);
             }
         }
+
+        public List<string> GetLabel(int userId)
+        {
+            try
+            {
+                var exist = this.userContext.labels.Where(x => x.UserId == userId).Select(x => x.LabelName).ToList();
+                if (exist.Count > 0)
+                {
+                    return exist;
+                }
+
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
     }
 }

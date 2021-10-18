@@ -49,5 +49,17 @@ namespace FundooManager.Manager
                 throw new Exception(e.Message);
             }
         }
+
+        public List<string> GetLabel(int userId)
+        {
+            try
+            {
+                return this.repository.GetLabel(userId);
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
     }
 }
