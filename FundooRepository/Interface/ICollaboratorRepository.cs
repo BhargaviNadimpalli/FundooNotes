@@ -11,5 +11,7 @@ namespace FundooRepository.Interface
 
         string RemoveCollaborator(int colId);
 
+        List<string> GetCollaborator(int noteId);
+
     }
 }

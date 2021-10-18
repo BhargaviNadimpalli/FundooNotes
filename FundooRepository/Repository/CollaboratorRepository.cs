@@ -81,5 +81,23 @@ namespace FundooRepository.Repository
                 throw new Exception(ex.Message);
             }
         }
+
+        public List<string> GetCollaborator(int noteId)
+        {
+            try
+            {
+                var exists = this.userContext.collaborators.Where(x => x.NotesId == noteId).Select(x => x.ColEmail).ToList();
+                if (exists.Count > 0)
+                {
+                    return exists;
+                }
+
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
     }
 }
