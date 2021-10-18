@@ -25,5 +25,17 @@ namespace FundooManager.Manager
                 throw new Exception(e.Message);
             }
         }
+
+        public string DeleteLabel(int userId, string labelName)
+        {
+            try
+            {
+                return this.repository.DeleteLabel(userId, labelName);
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
     }
 }
