@@ -33,11 +33,14 @@ namespace FundooRepository.Migrations
                     b.Property<int>("NotesId")
                         .HasColumnType("int");
 
+                    b.Property<int?>("notesModelNotesId")
+                        .HasColumnType("int");
+
                     b.HasKey("ColId");
 
-                    b.HasIndex("NotesId");
+                    b.HasIndex("notesModelNotesId");
 
-                    b.ToTable("models");
+                    b.ToTable("collaborators");
                 });
 
             modelBuilder.Entity("FundooModels.NotesModel", b =>
@@ -115,9 +118,7 @@ namespace FundooRepository.Migrations
                 {
                     b.HasOne("FundooModels.NotesModel", "notesModel")
                         .WithMany()
-                        .HasForeignKey("NotesId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("notesModelNotesId");
                 });
 
             modelBuilder.Entity("FundooModels.NotesModel", b =>

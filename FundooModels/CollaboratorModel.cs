@@ -10,16 +10,16 @@ namespace FundooModels
     {
         [Key]
         public int ColId { get; set; }
-
         
-        public int NotesId { get; set; }
+        [Required]
+        [RegularExpression("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:/.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?", ErrorMessage = "Email is not valid. Please enter the valid email")]
 
-        
+        public string ColEmail { get; set; }
+
         [ForeignKey("NotesId")]
+
+        public int NotesId { get; set; }
         public NotesModel notesModel { get; set; }
 
-        
-        [Required]     
-        public string ColEmail { get; set; }
     }
 }

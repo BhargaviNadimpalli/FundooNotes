@@ -44,6 +44,10 @@ namespace FundooNotes
 
             services.AddTransient<INotesRepository, NotesRepository>();
             services.AddTransient<INotesManager, NotesManager>();
+
+            services.AddTransient<ICollaboratorRepository, CollaboratorRepository>();
+            services.AddTransient<ICollaboratorManager, CollaboratorManager>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

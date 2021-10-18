@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FundooRepository.Migrations
 {
     [DbContext(typeof(UserContext))]
-    [Migration("20211016024305_Collaborator")]
+    [Migration("20211018114408_Collaborator")]
     partial class Collaborator
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -35,11 +35,14 @@ namespace FundooRepository.Migrations
                     b.Property<int>("NotesId")
                         .HasColumnType("int");
 
+                    b.Property<int?>("notesModelNotesId")
+                        .HasColumnType("int");
+
                     b.HasKey("ColId");
 
-                    b.HasIndex("NotesId");
+                    b.HasIndex("notesModelNotesId");
 
-                    b.ToTable("models");
+                    b.ToTable("collaborators");
                 });
 
             modelBuilder.Entity("FundooModels.NotesModel", b =>
@@ -117,9 +120,7 @@ namespace FundooRepository.Migrations
                 {
                     b.HasOne("FundooModels.NotesModel", "notesModel")
                         .WithMany()
-                        .HasForeignKey("NotesId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("notesModelNotesId");
                 });
 
             modelBuilder.Entity("FundooModels.NotesModel", b =>
