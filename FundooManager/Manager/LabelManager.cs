@@ -1,20 +1,46 @@
-﻿using FundooManager.Interface;
-using FundooModels;
-using FundooRepository.Interface;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="LabelManager.cs" company="Bridgelabz">
+//   Copyright © 2021 Company="BridgeLabz"
+// </copyright>
+// <creator name="Bhargavi Nadimpalli"/>
+// --------------------------------------------------------------------------------------------------------------------
 namespace FundooManager.Manager
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Threading.Tasks;
+    using FundooManager.Interface;
+    using FundooModels;
+    using FundooRepository.Interface;
+  
+    /// <summary>
+    /// class label manager
+    /// </summary>
+    /// <seealso cref="FundooManager.Interface.ILabelManager" />
     public class LabelManager : ILabelManager
     {
+        /// <summary>
+        /// ILabelRepository repository
+        /// </summary>
         private readonly ILabelRepository repository;
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="LabelManager"/> class.
+        /// </summary>
+        /// <param name="repository">The repository.</param>
         public LabelManager(ILabelRepository repository)
         {
             this.repository = repository;
         }
-        public string AddLabel(LabelModel labelModel)
+
+        /// <summary>
+        /// Adds the label.
+        /// </summary>
+        /// <param name="labelModel">The label model.</param>
+        /// <returns>
+        /// returns string after adding label
+        /// </returns>
+        public Task<string> AddLabel(LabelModel labelModel)
         {
             try
             {
@@ -26,7 +52,15 @@ namespace FundooManager.Manager
             }
         }
 
-        public string DeleteLabel(int userId, string labelName)
+        /// <summary>
+        /// Deletes the label.
+        /// </summary>
+        /// <param name="userId">The user identifier.</param>
+        /// <param name="labelName">Name of the label.</param>
+        /// <returns>
+        /// returns string after deleting label
+        /// </returns>
+        public Task<string> DeleteLabel(int userId, string labelName)
         {
             try
             {
@@ -38,7 +72,16 @@ namespace FundooManager.Manager
             }
         }
 
-        public string EditLabel(int userId, string labelName, string newLabelName)
+        /// <summary>
+        /// Edits the label.
+        /// </summary>
+        /// <param name="userId">The user identifier.</param>
+        /// <param name="labelName">Name of the label.</param>
+        /// <param name="newLabelName">New name of the label.</param>
+        /// <returns>
+        /// returns string after editing label
+        /// </returns>
+        public Task<string> EditLabel(int userId, string labelName, string newLabelName)
         {
             try
             {
@@ -50,11 +93,94 @@ namespace FundooManager.Manager
             }
         }
 
-        public List<string> GetLabel(int userId)
+        /// <summary>
+        /// Removes the label using label identifier.
+        /// </summary>
+        /// <param name="labelId">The lable identifier.</param>
+        /// <returns>
+        /// returns string after removing label using labelId
+        /// </returns>
+        public Task<string> RemoveLabelUsingLabelId(int labelId)
         {
             try
             {
-                return this.repository.GetLabel(userId);
+                return this.repository.RemoveLabelUsingLabelId(labelId);
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+
+        /// <summary>
+        /// Removes the label using note identifier.
+        /// </summary>
+        /// <param name="noteId">The note identifier.</param>
+        /// <returns>
+        /// returns string after removing label using noteId
+        /// </returns>
+        public Task<string> RemoveLabelUsingNoteId(int noteId)
+        {
+            try
+            {
+                return this.repository.RemoveLabelUsingNoteId(noteId);
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+
+        /// <summary>
+        /// Gets the label using user identifier.
+        /// </summary>
+        /// <param name="userId">The user identifier.</param>
+        /// <returns>
+        /// returns string after getting label using userId
+        /// </returns>
+        public List<LabelModel> GetLabelUsingUserId(int userId)
+        {
+            try
+            {
+                return this.repository.GetLabelUsingUserId(userId);
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+
+        /// <summary>
+        /// Gets the label using label identifier.
+        /// </summary>
+        /// <param name="labelId">The label identifier.</param>
+        /// <returns>
+        /// returns string after getting label using labelId
+        /// </returns>
+        public List<LabelModel> GetLabelUsingLabelId(int labelId)
+        {
+            try
+            {
+                return this.repository.GetLabelUsingLabelId(labelId);
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+
+        /// <summary>
+        /// Gets the label by note identifier.
+        /// </summary>
+        /// <param name="noteId">The note identifier.</param>
+        /// <returns>
+        /// returns string after getting label using noteId
+        /// </returns>
+        public List<LabelModel> GetLabelByNoteId(int noteId)
+        {
+            try
+            {
+                return this.repository.GetLabelByNoteId(noteId);
             }
             catch (Exception e)
             {

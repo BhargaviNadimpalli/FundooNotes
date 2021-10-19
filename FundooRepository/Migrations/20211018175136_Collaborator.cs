@@ -10,27 +10,27 @@ namespace FundooRepository.Migrations
                 name: "collaborators",
                 columns: table => new
                 {
-                    ColId = table.Column<int>(nullable: false)
+                    CollaboratorId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    ColEmail = table.Column<string>(nullable: false),
-                    NotesId = table.Column<int>(nullable: false),
-                    notesModelNotesId = table.Column<int>(nullable: true)
+                    SenderEmail = table.Column<string>(nullable: false),
+                    ReceiverEmail = table.Column<string>(nullable: false),
+                    NoteId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_collaborators", x => x.ColId);
+                    table.PrimaryKey("PK_collaborators", x => x.CollaboratorId);
                     table.ForeignKey(
-                        name: "FK_collaborators_notes_notesModelNotesId",
-                        column: x => x.notesModelNotesId,
+                        name: "FK_collaborators_notes_NoteId",
+                        column: x => x.NoteId,
                         principalTable: "notes",
                         principalColumn: "NotesId",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_collaborators_notesModelNotesId",
+                name: "IX_collaborators_NoteId",
                 table: "collaborators",
-                column: "notesModelNotesId");
+                column: "NoteId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
