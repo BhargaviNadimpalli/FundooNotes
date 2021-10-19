@@ -41,7 +41,7 @@ namespace FundooRepository.Interface
         /// <summary>
         /// Removes the label using label identifier.
         /// </summary>
-        /// <param name="labelId">The lable identifier.</param>
+        /// <param name="labelId">The label identifier.</param>
         /// <returns>returns string after removing label using labelId</returns>
         Task<string> RemoveLabelUsingLabelId(int labelId);
 

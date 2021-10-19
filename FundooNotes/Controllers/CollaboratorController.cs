@@ -36,7 +36,7 @@ namespace FundooNotes.Controllers
         /// Adds the collaborator.
         /// </summary>
         /// <param name="collaborator">The collaborator.</param>
-        /// <returns>returns IActionResult status code after adding collaborator</returns>
+        /// <returns>Below function returns the status code as IAction Result</returns>
         [HttpPost]
         [Route("api/addCollaborator")]
         public async Task<IActionResult> AddCollaborator([FromBody] CollaboratorModel collaborator)
@@ -61,7 +61,7 @@ namespace FundooNotes.Controllers
         /// Removes the collaborator.
         /// </summary>
         /// <param name="colId">The col identifier.</param>
-        /// <returns>returns IActionResult status code after deleting collaborator</returns>
+        /// <returns>Below function returns the status code as IAction Result</returns>
         [HttpDelete]
         [Route("api/deleteCollaborator")]
         public async Task<IActionResult> RemoveCollaborator(int colId)
@@ -86,7 +86,7 @@ namespace FundooNotes.Controllers
         /// Gets the collaborator.
         /// </summary>
         /// <param name="noteId">The note identifier.</param>
-        /// <returns>returns IActionResult status code after getting collaborator</returns>
+        /// <returns>Below function returns the status code as IAction Result</returns>
         [HttpPost]
         [Route("api/getCollaborator")]
         public IActionResult GetCollaborator(int noteId)

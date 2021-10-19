@@ -118,7 +118,11 @@ namespace FundooRepository.Repository
             }
         }
 
-        
+        /// <summary>
+        /// Remove the Label Using LabelId
+        /// </summary>
+        /// <param name="labelId">The label Id</param>
+        /// <returns>returns string after removing label using labelId</returns>
         public async Task<string> RemoveLabelUsingLabelId(int labelId)
         {
             try
@@ -139,6 +143,11 @@ namespace FundooRepository.Repository
             }
         }
 
+        /// <summary>
+        /// Remove the Label Using NoteId
+        /// </summary>
+        /// <param name="noteId">The note Id</param>
+        /// <returns>returns string after removing label using noteId</returns>
         public async Task<string> RemoveLabelUsingNoteId(int noteId)
         {
             try
@@ -159,7 +168,11 @@ namespace FundooRepository.Repository
             }
         }
 
-
+        /// <summary>
+        /// Get the Label Using UserId
+        /// </summary>
+        /// <param name="userId">The user Id</param>
+        /// <returns>returns string after getting label using userId</returns>
         public List<LabelModel> GetLabelUsingUserId(int userId)
         {
             try
@@ -178,6 +191,11 @@ namespace FundooRepository.Repository
             }
         }
 
+        /// <summary>
+        /// Get the Label Using LabelId
+        /// </summary>
+        /// <param name="labelId">The label Id</param>
+        /// <returns>returns string after getting label using labelId</returns>
         public List<LabelModel> GetLabelUsingLabelId(int labelId)
         {
             try
@@ -196,6 +214,11 @@ namespace FundooRepository.Repository
             }
         }
 
+        /// <summary>
+        /// Get the Label By NoteId
+        /// </summary>
+        /// <param name="noteId">The note Id</param>
+        /// <returns>returns string after getting label using noteId</returns>
         public List<LabelModel> GetLabelByNoteId(int noteId)
         {
             try

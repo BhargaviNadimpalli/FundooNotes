@@ -36,7 +36,7 @@ namespace FundooNotes.Controllers
         /// Adds the label.
         /// </summary>
         /// <param name="label">The label.</param>
-        /// <returns></returns>
+        /// <returns>Below function returns the status code as IAction Result</returns>
         [HttpPost]
         [Route("api/addLabel")]
         public async Task<IActionResult> AddLabel([FromBody] LabelModel label)
@@ -57,6 +57,12 @@ namespace FundooNotes.Controllers
             }
         }
 
+        /// <summary>
+        /// Deletes the label.
+        /// </summary>
+        /// <param name="userId">The user identifier.</param>
+        /// <param name="labelName">Name of the label.</param>
+        /// <returns>Below function returns the status code as IAction Result</returns>
         [HttpDelete]
         [Route("api/deleteLabel")]
         public async Task<IActionResult> DeleteLabel(int userId, string labelName)
@@ -77,6 +83,13 @@ namespace FundooNotes.Controllers
             }
         }
 
+        /// <summary>
+        /// Edits the label.
+        /// </summary>
+        /// <param name="userId">The user identifier.</param>
+        /// <param name="labelName">Name of the label.</param>
+        /// <param name="newLabelName">New name of the label.</param>
+        /// <returns>Below function returns the status code as IAction Result</returns>
         [HttpPut]
         [Route("api/editLabel")]
         public async Task<IActionResult> EditLabel(int userId, string labelName, string newLabelName)
@@ -100,8 +113,8 @@ namespace FundooNotes.Controllers
         /// <summary>
         /// Removes the label using label identifier.
         /// </summary>
-        /// <param name="lableId">The lable identifier.</param>
-        /// <returns></returns>
+        /// <param name="labelId">The label identifier.</param>
+        /// <returns>Below function returns the status code as IAction Result</returns>
         [HttpDelete]
         [Route("api/removeLabelUsingLabelId")]
         public async Task<IActionResult> RemoveLabelUsingLabelId(int labelId)
@@ -124,6 +137,11 @@ namespace FundooNotes.Controllers
             }
         }
 
+        /// <summary>
+        /// Removes the label using note identifier.
+        /// </summary>
+        /// <param name="noteId">The note identifier.</param>
+        /// <returns>Below function returns the status code as IAction Result</returns>
         [HttpDelete]
         [Route("api/removeLabelusingNoteId")]
         public async Task<IActionResult> RemoveLabelUsingNoteId(int noteId)
@@ -146,6 +164,11 @@ namespace FundooNotes.Controllers
             }
         }
 
+        /// <summary>
+        /// Gets the label using user identifier.
+        /// </summary>
+        /// <param name="userId">The user identifier.</param>
+        /// <returns>Below function returns the status code as IAction Result</returns>
         [HttpGet]
         [Route("api/GetLabelUsingUserId")]
         public IActionResult GetLabelUsingUserId(int userId)
@@ -168,6 +191,11 @@ namespace FundooNotes.Controllers
             }
         }
 
+        /// <summary>
+        /// Gets the label using label identifier.
+        /// </summary>
+        /// <param name="labelId">The label identifier.</param>
+        /// <returns>Below function returns the status code as IAction Result</returns>
         [HttpGet]
         [Route("api/GetLabelUsingLabelId")]
         public IActionResult GetLabelUsingLabelId(int labelId)
@@ -190,6 +218,11 @@ namespace FundooNotes.Controllers
             }
         }
 
+        /// <summary>
+        /// Gets the label by note identifier.
+        /// </summary>
+        /// <param name="noteId">The note identifier.</param>
+        /// <returns>Below function returns the status code as IAction Result</returns>
         [HttpGet]
         [Route("api/GetLabelByNoteId")]
         public IActionResult GetLabelByNoteId(int noteId)
