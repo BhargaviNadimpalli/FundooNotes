@@ -1,76 +1,82 @@
-﻿using FundooModels;
-using FundooRepository.Context;
-using FundooRepository.Interface;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
+﻿// <copyright file="CollaboratorRepository.cs" company="Bridgelabz">
+//   Copyright © 2021 Company="BridgeLabz"
+// </copyright>
+// <creator name="Bhargavi Nadimpalli"/>
+// --------------------------------------------------------------------------------------------------------------------
 namespace FundooRepository.Repository
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Threading.Tasks;
+    using FundooModels;
+    using FundooRepository.Context;
+    using FundooRepository.Interface;
+
+    /// <summary>
+    /// class collaborator repository
+    /// </summary>
+    /// <seealso cref="FundooRepository.Interface.ICollaboratorRepository" />
     public class CollaboratorRepository : ICollaboratorRepository
     {
+        /// <summary>
+        /// UserContext userContext
+        /// </summary>
+        private readonly UserContext userContext;
 
-        public readonly UserContext userContext;
-
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CollaboratorRepository"/> class.
+        /// </summary>
+        /// <param name="userContext">The user context.</param>
         public CollaboratorRepository(UserContext userContext)
         {
             this.userContext = userContext;
         }
-        public string AddCollaborator(CollaboratorModel collaborator)
+
+        /// <summary>
+        /// Adds the collaborator.
+        /// </summary>
+        /// <param name="collaborator">The collaborator.</param>
+        /// <returns>
+        /// returns string after adding collaborator
+        /// </returns>
+        public async Task<string> AddCollaborator(CollaboratorModel collaborator)
         {
             try
             {
-                string message = string.Empty;
-                var emailExists = this.userContext.Users.Where(x => x.Email == collaborator.ColEmail).SingleOrDefault();
-                if (emailExists != null)
+                if (collaborator.NoteId > 0 && collaborator.ReceiverEmail != null)
                 {
-                    var owner = (from user in this.userContext.Users
-                                 join notes in this.userContext.notes
-                                 on user.UserId equals notes.UserId
-                                 where notes.NotesId == collaborator.NotesId && user.Email == collaborator.ColEmail
-                                 select new { userId = user.UserId }).SingleOrDefault();
-                    if (owner == null)
-                    {
-                        var colExists = this.userContext.collaborators.Where(x => x.ColEmail == collaborator.ColEmail && x.NotesId == collaborator.NotesId).SingleOrDefault();
-                        if (colExists == null)
-                        {
-                            this.userContext.Add(collaborator);
-                            this.userContext.SaveChanges();
-                            message = "Collaborator Added!";
-                        }
-                        else
-                        {
-                            message = "This email already exists";
-                        }
-                    }
-                    else
-                    {
-                        message = "This email already exists";
-                    }
+                    this.userContext.collaborators.Add(collaborator);
+                   await this.userContext.SaveChangesAsync();
+                    return "True";
                 }
                 else
                 {
-                    message = "Invalid Email";
+                    return "False";
                 }
-
-                return message;
             }
-            catch (ArgumentNullException ex)
+            catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
         }
 
-        public string RemoveCollaborator(int colId)
+        /// <summary>
+        /// Removes the collaborator.
+        /// </summary>
+        /// <param name="colId">The col identifier.</param>
+        /// <returns>
+        /// returns string after removing collaborator
+        /// </returns>
+        public async Task<string> RemoveCollaborator(int colId)
         {
             try
             {
-                var colExists = this.userContext.collaborators.Where(x => x.ColId == colId).FirstOrDefault();
+                var colExists = this.userContext.collaborators.Where(x => x.CollaboratorId == colId).FirstOrDefault();
                 if (colExists != null)
                 {
                     this.userContext.collaborators.Remove(colExists);
-                    this.userContext.SaveChanges();
+                    await this.userContext.SaveChangesAsync();
                     return "Removed Collaborator";
                 }
 
@@ -82,11 +88,18 @@ namespace FundooRepository.Repository
             }
         }
 
-        public List<string> GetCollaborator(int noteId)
+        /// <summary>
+        /// Gets the collaborator.
+        /// </summary>
+        /// <param name="noteId">The note identifier.</param>
+        /// <returns>
+        /// returns string after getting collaborator
+        /// </returns>
+       public List<string> GetCollaborator(int noteId)
         {
             try
             {
-                var exists = this.userContext.collaborators.Where(x => x.NotesId == noteId).Select(x => x.ColEmail).ToList();
+                var exists = this.userContext.collaborators.Where(x => x.NoteId == noteId).Select(x => x.SenderEmail).ToList();
                 if (exists.Count > 0)
                 {
                     return exists;

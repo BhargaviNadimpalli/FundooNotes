@@ -1,32 +1,52 @@
-﻿using FundooManager.Interface;
-using FundooModels;
-using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
+﻿// <copyright file="CollaboratorController.cs" company="Bridgelabz">
+//   Copyright © 2021 Company="BridgeLabz"
+// </copyright>
+// <creator name="Bhargavi Nadimpalli"/>
+// --------------------------------------------------------------------------------------------------------------------
 namespace FundooNotes.Controllers
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Threading.Tasks;
+    using FundooManager.Interface;
+    using FundooModels;
+    using Microsoft.AspNetCore.Mvc;
+
+    /// <summary>
+    /// class collaborator controller
+    /// </summary>
+    /// <seealso cref="Microsoft.AspNetCore.Mvc.ControllerBase" />
     public class CollaboratorController : ControllerBase
     {
+        /// <summary>
+        /// ICollaboratorManager manager
+        /// </summary>
         private readonly ICollaboratorManager manager;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CollaboratorController"/> class.
+        /// </summary>
+        /// <param name="manager">The manager.</param>
         public CollaboratorController(ICollaboratorManager manager)
         {
             this.manager = manager;
         }
 
+        /// <summary>
+        /// Adds the collaborator.
+        /// </summary>
+        /// <param name="collaborator">The collaborator.</param>
+        /// <returns>returns IActionResult status code after adding collaborator</returns>
         [HttpPost]
         [Route("api/addCollaborator")]
-        public IActionResult AddCollaborator([FromBody] CollaboratorModel collaborator)
+        public async Task<IActionResult> AddCollaborator([FromBody] CollaboratorModel collaborator)
         {
             try
             {
-                string result = this.manager.AddCollaborator(collaborator);
-                if (result == "Collaborator Added!")
+                string result = await this.manager.AddCollaborator(collaborator);
+                if (result == "True")
                 {
-                    return this.Ok(new ResponseModel<string>() { Status = true, Message = result, Data = collaborator.ColEmail });
+                    return this.Ok(new ResponseModel<string>() { Status = true, Message = result, Data = collaborator.SenderEmail });
                 }
 
                 return this.BadRequest(new ResponseModel<string>() { Status = false, Message = result });
@@ -37,13 +57,18 @@ namespace FundooNotes.Controllers
             }
         }
 
+        /// <summary>
+        /// Removes the collaborator.
+        /// </summary>
+        /// <param name="colId">The col identifier.</param>
+        /// <returns>returns IActionResult status code after deleting collaborator</returns>
         [HttpDelete]
         [Route("api/deleteCollaborator")]
-        public IActionResult RemoveCollaborator(int colId)
+        public async Task<IActionResult> RemoveCollaborator(int colId)
         {
             try
             {
-                string result = this.manager.RemoveCollaborator(colId);
+                string result = await this.manager.RemoveCollaborator(colId);
                 if (result == "Removed Collaborator")
                 {
                     return this.Ok(new ResponseModel<string>() { Status = true, Message = result });
@@ -57,6 +82,11 @@ namespace FundooNotes.Controllers
             }
         }
 
+        /// <summary>
+        /// Gets the collaborator.
+        /// </summary>
+        /// <param name="noteId">The note identifier.</param>
+        /// <returns>returns IActionResult status code after getting collaborator</returns>
         [HttpPost]
         [Route("api/getCollaborator")]
         public IActionResult GetCollaborator(int noteId)

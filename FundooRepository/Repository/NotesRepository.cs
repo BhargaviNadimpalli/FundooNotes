@@ -1,31 +1,58 @@
-﻿using CloudinaryDotNet;
-using CloudinaryDotNet.Actions;
-using FundooModels;
-using FundooRepository.Context;
-using FundooRepository.Interface;
-using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.Configuration;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿// <copyright file="NotesRepository.cs" company="Bridgelabz">
+//   Copyright © 2021 Company="BridgeLabz"
+// </copyright>
+// <creator name="Bhargavi Nadimpalli"/>
+// --------------------------------------------------------------------------------------------------------------------
 namespace FundooRepository.Repository
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Threading.Tasks;
+    using CloudinaryDotNet;
+    using CloudinaryDotNet.Actions;
+    using FundooModels;
+    using FundooRepository.Context;
+    using FundooRepository.Interface;
+    using Microsoft.AspNetCore.Http;
+    using Microsoft.Extensions.Configuration;
+
+    /// <summary>
+    /// class notes repository
+    /// </summary>
+    /// <seealso cref="FundooRepository.Interface.INotesRepository" />
     public class NotesRepository : INotesRepository
     {
+        /// <summary>
+        /// UserContext userContext
+        /// </summary>
         private readonly UserContext userContext;
+
+        /// <summary>
+        /// IConfiguration configuration
+        /// </summary>
         private readonly IConfiguration configuration;
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="NotesRepository"/> class.
+        /// </summary>
+        /// <param name="userContext">The user context.</param>
+        /// <param name="configuration">The configuration.</param>
         public NotesRepository(UserContext userContext, IConfiguration configuration)
         {
             this.userContext = userContext;
             this.configuration = configuration;
         }
 
+        /// <summary>
+        /// Adds the notes.
+        /// </summary>
+        /// <param name="model">The model.</param>
+        /// <returns>
+        /// returns string after adding note
+        /// </returns>
         public async Task<string> AddNotes(NotesModel model)
         {
-
             try
             {
                 if (model.Title != null || model.Notes != null || model.Remainder != null)
@@ -45,7 +72,13 @@ namespace FundooRepository.Repository
             }
         }
 
-
+        /// <summary>
+        /// Updates the notes.
+        /// </summary>
+        /// <param name="model">The model.</param>
+        /// <returns>
+        /// returns string after updating note
+        /// </returns>
         public async Task<string> UpdateNotes(NotesModel model)
         {
             try
@@ -67,6 +100,15 @@ namespace FundooRepository.Repository
                 throw new Exception(e.Message);
             }
         }
+
+        /// <summary>
+        /// Updates the color.
+        /// </summary>
+        /// <param name="noteId">The note identifier.</param>
+        /// <param name="color">The color.</param>
+        /// <returns>
+        /// returns string after updating color
+        /// </returns>
         public async Task<string> UpdateColor(int noteId, string color)
         {
             try
@@ -95,6 +137,14 @@ namespace FundooRepository.Repository
             }
         }
 
+        /// <summary>
+        /// Sets the remainder.
+        /// </summary>
+        /// <param name="notesId">The notes identifier.</param>
+        /// <param name="remainder">The remainder.</param>
+        /// <returns>
+        /// returns string after set remainder
+        /// </returns>
         public async Task<string> SetRemainder(int notesId, string remainder)
         {
             try
@@ -116,6 +166,13 @@ namespace FundooRepository.Repository
             }
         }
 
+        /// <summary>
+        /// Deletes the remainder.
+        /// </summary>
+        /// <param name="notesId">The notes identifier.</param>
+        /// <returns>
+        /// returns string after deleting remainder
+        /// </returns>
         public async Task<string> DeleteRemainder(int notesId)
         {
             try
@@ -137,6 +194,13 @@ namespace FundooRepository.Repository
             }
         }
 
+        /// <summary>
+        /// Updates the pin.
+        /// </summary>
+        /// <param name="notesId">The notes identifier.</param>
+        /// <returns>
+        /// returns string after updating pin
+        /// </returns>
         public async Task<string> UpdatePin(int notesId)
         {
             try
@@ -177,6 +241,13 @@ namespace FundooRepository.Repository
             }
         }
 
+        /// <summary>
+        /// Updates the archive.
+        /// </summary>
+        /// <param name="notesId">The notes identifier.</param>
+        /// <returns>
+        /// returns string after updating archive
+        /// </returns>
         public async Task<string> UpdateArchive(int notesId)
         {
             try
@@ -217,6 +288,13 @@ namespace FundooRepository.Repository
             }
         }
 
+        /// <summary>
+        /// Deletes the note add to trash.
+        /// </summary>
+        /// <param name="notesId">The notes identifier.</param>
+        /// <returns>
+        /// returns string after deleting note adding to trash
+        /// </returns>
         public async Task<string> DeleteNoteAddToTrash(int notesId)
         {
             try
@@ -249,9 +327,15 @@ namespace FundooRepository.Repository
             {
                 throw new Exception(e.Message);
             }
-
         }
 
+        /// <summary>
+        /// Restores from trash.
+        /// </summary>
+        /// <param name="notesId">The notes identifier.</param>
+        /// <returns>
+        /// returns string after restoring from trash
+        /// </returns>
         public async Task<string> RestoreFromTrash(int notesId)
         {
             try
@@ -273,6 +357,13 @@ namespace FundooRepository.Repository
             }
         }
 
+        /// <summary>
+        /// Gets the notes.
+        /// </summary>
+        /// <param name="userId">The user identifier.</param>
+        /// <returns>
+        /// returns string after getting note
+        /// </returns>
         public List<NotesModel> GetNotes(int userId)
         {
             try
@@ -291,6 +382,13 @@ namespace FundooRepository.Repository
             }
         }
 
+        /// <summary>
+        /// Gets the remainder notes.
+        /// </summary>
+        /// <param name="userId">The user identifier.</param>
+        /// <returns>
+        /// returns string after getting remainder note
+        /// </returns>
         public List<NotesModel> GetRemainderNotes(int userId)
         {
             try
@@ -309,6 +407,13 @@ namespace FundooRepository.Repository
             }
         }
 
+        /// <summary>
+        /// Gets the archive notes.
+        /// </summary>
+        /// <param name="userId">The user identifier.</param>
+        /// <returns>
+        /// returns string after getting archive note
+        /// </returns>
         public List<NotesModel> GetArchiveNotes(int userId)
         {
             try
@@ -327,6 +432,13 @@ namespace FundooRepository.Repository
             }
         }
 
+        /// <summary>
+        /// Gets the trash notes.
+        /// </summary>
+        /// <param name="userId">The user identifier.</param>
+        /// <returns>
+        /// returns string after getting trash note
+        /// </returns>
         public List<NotesModel> GetTrashNotes(int userId)
         {
             try
@@ -345,7 +457,14 @@ namespace FundooRepository.Repository
             }
         }
 
-
+        /// <summary>
+        /// Adds the image.
+        /// </summary>
+        /// <param name="notesId">The notes identifier.</param>
+        /// <param name="image">The image.</param>
+        /// <returns>
+        /// returns string after adding image
+        /// </returns>
         public string AddImage(int notesId, IFormFile image)
         {
             try
@@ -353,7 +472,7 @@ namespace FundooRepository.Repository
                 var noteData = this.userContext.notes.Find(notesId);
                 if (noteData != null)
                 {
-                    Account account = new Account(configuration["CloudinaryAccount:CloudName"], configuration["CloudinaryAccount:ApiKey"], configuration["CloudinaryAccount:ApiSecret"]);
+                    Account account = new Account(this.configuration["CloudinaryAccount:CloudName"], this.configuration["CloudinaryAccount:ApiKey"], this.configuration["CloudinaryAccount:ApiSecret"]);
                     Cloudinary cloudinary = new Cloudinary(account);
                     ImageUploadParams uploadParams = new ImageUploadParams()
                     {
@@ -364,6 +483,7 @@ namespace FundooRepository.Repository
                     this.userContext.SaveChanges();
                     return "Image added successfully";
                 }
+
                 return "Image is not added";
             }
             catch (ArgumentNullException ex)
@@ -372,6 +492,13 @@ namespace FundooRepository.Repository
             }
         }
 
+        /// <summary>
+        /// Removes the image.
+        /// </summary>
+        /// <param name="notesId">The notes identifier.</param>
+        /// <returns>
+        /// returns string after removing image
+        /// </returns>
         public string RemoveImage(int notesId)
         {
             try
@@ -384,6 +511,7 @@ namespace FundooRepository.Repository
 
                     return "Image deleted successfully";
                 }
+
                 return "Image is not deleted";
             }
             catch (Exception ex)
