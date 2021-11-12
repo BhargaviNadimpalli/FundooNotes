@@ -10,9 +10,11 @@ namespace FundooNotes.Controllers
     using System.Threading.Tasks;
     using FundooManager.Interface;
     using FundooModels;
+    using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Http;
     using Microsoft.AspNetCore.Mvc;
 
+    [Authorize]
     /// <summary>
     /// class notes controller
     /// </summary>
@@ -279,33 +281,6 @@ namespace FundooNotes.Controllers
         }
 
         /// <summary>
-        /// Restores from trash.
-        /// </summary>
-        /// <param name="notesId">The notes identifier.</param>
-        /// <returns>returns a IActionResult as status code when data restore from trash</returns>
-        [HttpPut]
-        [Route("api/restoreTrash")]
-        public async Task<IActionResult> RestoreFromTrash(int notesId)
-        {
-            try
-            {
-                string result = await this.manager.RestoreFromTrash(notesId);
-                if (result != "Note is not present in trash")
-                {
-                    return this.Ok(new ResponseModel<string>() { Status = true, Message = result });
-                }
-                else
-                {
-                    return this.BadRequest(new ResponseModel<string>() { Status = false, Message = result });
-                }
-            }
-            catch (Exception ex)
-            {
-                return this.NotFound(new ResponseModel<string>() { Status = false, Message = ex.Message });
-            }
-        }
-
-        /// <summary>
         /// Gets the remainder notes.
         /// </summary>
         /// <param name="userId">The user identifier.</param>
@@ -318,7 +293,7 @@ namespace FundooNotes.Controllers
             {
                 var result = this.manager.GetRemainderNotes(userId);
 
-                if (result.Count > 0)
+                if (result != null)
                 {
                     return this.Ok(new ResponseModel<List<NotesModel>>() { Status = true, Message = "Retrieved Successfully", Data = result });
                 }
@@ -338,7 +313,7 @@ namespace FundooNotes.Controllers
         /// </summary>
         /// <param name="userId">The user identifier.</param>
         /// <returns>returns a IActionResult as status code when archive note exists</returns>
-        [HttpPost]
+        [HttpGet]
         [Route("api/GetArchiveNotes")]
         public IActionResult GetArchiveNotes(int userId)
         {
@@ -346,7 +321,7 @@ namespace FundooNotes.Controllers
             {
                 var result = this.manager.GetArchiveNotes(userId);
 
-                if (result.Count > 0)
+                if (result != null)
                 {
                     return this.Ok(new ResponseModel<List<NotesModel>>() { Status = true, Message = "Retrieved Successfully", Data = result });
                 }
@@ -366,7 +341,7 @@ namespace FundooNotes.Controllers
         /// </summary>
         /// <param name="userId">The user identifier.</param>
         /// <returns>returns a IActionResult as status code when trash note exists</returns>
-        [HttpPost]
+        [HttpGet]
         [Route("api/GetTrashNotes")]
         public IActionResult GetTrashNotes(int userId)
         {
@@ -374,7 +349,7 @@ namespace FundooNotes.Controllers
             {
                 var result = this.manager.GetTrashNotes(userId);
 
-                if (result.Count > 0)
+                if (result != null)
                 {
                     return this.Ok(new ResponseModel<List<NotesModel>>() { Status = true, Message = "Retrieved Successfully", Data = result });
                 }

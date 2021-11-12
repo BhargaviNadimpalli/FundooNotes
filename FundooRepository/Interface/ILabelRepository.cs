@@ -72,5 +72,21 @@ namespace FundooRepository.Interface
         /// <param name="noteId">The note identifier.</param>
         /// <returns>returns string after getting label using noteId</returns>
         List<LabelModel> GetLabelByNoteId(int noteId);
+
+        /// <summary>
+        /// Adds the label without note identifier.
+        /// </summary>
+        /// <param name="labelModel">The label model.</param>
+        /// <returns>returns string after adding label without noteId</returns>
+        Task<string> AddLabelwithoutNoteId(LabelModel labelModel);
+
+        /// <summary>
+        /// Edits the label with note identifier.
+        /// </summary>
+        /// <param name="noteId">The note identifier.</param>
+        /// <param name="labelName">Name of the label.</param>
+        /// <param name="newLabelName">New name of the label.</param>
+        /// <returns>returns string after editing label with noteId</returns>
+        Task<string> EditLabelWithNoteId(int noteId, string labelName, string newLabelName);
     }
 }

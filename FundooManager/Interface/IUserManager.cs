@@ -42,5 +42,12 @@ namespace FundooManager.Interface
         /// <param name="resetpassword">The reset password.</param>
         /// <returns>returns string after reset password</returns>
         Task<string> ResetPassword(LoginDetails resetpassword);
+
+        /// <summary>
+        /// Generate the token.
+        /// </summary>
+        /// <param name="Email">The email.</param>
+        /// <returns>returns string after generating token</returns>
+        string GenerateToken(string Email);
     }
 }

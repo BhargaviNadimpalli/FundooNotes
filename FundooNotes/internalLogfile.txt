@@ -1,0 +1,666 @@
+2021-10-20 23:10:12.4682 Info Message Template Auto Format enabled
+2021-10-20 23:10:12.5463 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-20 23:10:12.7618 Info Adding target FileTarget(Name=allfile)
+2021-10-20 23:10:12.8456 Info Adding target FileTarget(Name=ownFile-web)
+2021-10-20 23:10:12.8792 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-10-20 23:10:12.9531 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-10-20 23:10:13.0270 Info Configuration initialized.
+2021-10-20 23:10:13.0270 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-10-23 11:57:01.7816 Info Message Template Auto Format enabled
+2021-10-23 11:57:01.8367 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-23 11:57:02.1868 Info Adding target FileTarget(Name=allfile)
+2021-10-23 11:57:02.3060 Info Adding target FileTarget(Name=ownFile-web)
+2021-10-23 11:57:02.3599 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-10-23 11:57:02.4450 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-10-23 11:57:02.5403 Info Configuration initialized.
+2021-10-23 11:57:02.5403 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-10-25 11:51:49.5886 Info Message Template Auto Format enabled
+2021-10-25 11:51:49.6209 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-25 11:51:49.9476 Info Adding target FileTarget(Name=allfile)
+2021-10-25 11:51:50.2540 Info Adding target FileTarget(Name=ownFile-web)
+2021-10-25 11:51:50.3041 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-10-25 11:51:50.4130 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-10-25 11:51:50.5367 Info Configuration initialized.
+2021-10-25 11:51:50.5676 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-10-25 16:23:15.7349 Info Message Template Auto Format enabled
+2021-10-25 16:23:15.7678 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-25 16:23:15.9526 Info Adding target FileTarget(Name=allfile)
+2021-10-25 16:23:15.9605 Info Adding target FileTarget(Name=ownFile-web)
+2021-10-25 16:23:16.0141 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-10-25 16:23:16.1097 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-10-25 16:23:16.1851 Info Configuration initialized.
+2021-10-25 16:23:16.1928 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-10-25 17:53:14.0429 Info Message Template Auto Format enabled
+2021-10-25 17:53:14.0701 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-25 17:53:14.2414 Info Adding target FileTarget(Name=allfile)
+2021-10-25 17:53:14.2414 Info Adding target FileTarget(Name=ownFile-web)
+2021-10-25 17:53:14.2757 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-10-25 17:53:14.3676 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-10-25 17:53:14.4475 Info Configuration initialized.
+2021-10-25 17:53:14.4475 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-10-25 17:59:07.5598 Info Message Template Auto Format enabled
+2021-10-25 17:59:07.6361 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-25 17:59:07.7831 Info Adding target FileTarget(Name=allfile)
+2021-10-25 17:59:07.7922 Info Adding target FileTarget(Name=ownFile-web)
+2021-10-25 17:59:07.8217 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-10-25 17:59:07.8802 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-10-25 17:59:07.9547 Info Configuration initialized.
+2021-10-25 17:59:07.9571 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-10-26 15:52:22.8697 Info Message Template Auto Format enabled
+2021-10-26 15:52:22.9013 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-26 15:52:23.1642 Info Adding target FileTarget(Name=allfile)
+2021-10-26 15:52:23.2016 Info Adding target FileTarget(Name=ownFile-web)
+2021-10-26 15:52:23.2540 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-10-26 15:52:23.3371 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-10-26 15:52:23.4332 Info Configuration initialized.
+2021-10-26 15:52:23.4332 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-10-26 16:08:47.9887 Info Message Template Auto Format enabled
+2021-10-26 16:08:48.0286 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-26 16:08:48.2779 Info Adding target FileTarget(Name=allfile)
+2021-10-26 16:08:48.2920 Info Adding target FileTarget(Name=ownFile-web)
+2021-10-26 16:08:48.3411 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-10-26 16:08:48.4119 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-10-26 16:08:48.5502 Info Configuration initialized.
+2021-10-26 16:08:48.5532 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-10-26 16:14:03.2317 Info Message Template Auto Format enabled
+2021-10-26 16:14:03.2794 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-26 16:14:03.4785 Info Adding target FileTarget(Name=allfile)
+2021-10-26 16:14:03.4944 Info Adding target FileTarget(Name=ownFile-web)
+2021-10-26 16:14:03.5253 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-10-26 16:14:03.5872 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-10-26 16:14:03.6545 Info Configuration initialized.
+2021-10-26 16:14:03.6545 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-10-26 16:21:40.0856 Info Message Template Auto Format enabled
+2021-10-26 16:21:40.2372 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-26 16:21:40.4438 Info Adding target FileTarget(Name=allfile)
+2021-10-26 16:21:40.4438 Info Adding target FileTarget(Name=ownFile-web)
+2021-10-26 16:21:40.4825 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-10-26 16:21:40.5744 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-10-26 16:21:40.6549 Info Configuration initialized.
+2021-10-26 16:21:40.6549 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-10-26 21:15:47.6408 Info Message Template Auto Format enabled
+2021-10-26 21:15:47.7465 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-26 21:15:48.1637 Info Adding target FileTarget(Name=allfile)
+2021-10-26 21:15:48.1637 Info Adding target FileTarget(Name=ownFile-web)
+2021-10-26 21:15:48.2237 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-10-26 21:15:48.4350 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-10-26 21:15:48.5255 Info Configuration initialized.
+2021-10-26 21:15:48.5255 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-10-27 14:13:21.3713 Info Message Template Auto Format enabled
+2021-10-27 14:13:21.4136 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-27 14:13:21.8956 Info Adding target FileTarget(Name=allfile)
+2021-10-27 14:13:22.1189 Info Adding target FileTarget(Name=ownFile-web)
+2021-10-27 14:13:22.2339 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-10-27 14:13:22.4146 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-10-27 14:13:22.6087 Info Configuration initialized.
+2021-10-27 14:13:22.6274 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-10-27 18:15:53.2200 Info Message Template Auto Format enabled
+2021-10-27 18:15:53.2488 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-27 18:15:53.4790 Info Adding target FileTarget(Name=allfile)
+2021-10-27 18:15:53.4890 Info Adding target FileTarget(Name=ownFile-web)
+2021-10-27 18:15:53.5342 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-10-27 18:15:53.6058 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-10-27 18:15:53.6819 Info Configuration initialized.
+2021-10-27 18:15:53.6819 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-10-27 18:22:08.2472 Info Message Template Auto Format enabled
+2021-10-27 18:22:08.3310 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-27 18:22:08.5185 Info Adding target FileTarget(Name=allfile)
+2021-10-27 18:22:08.5255 Info Adding target FileTarget(Name=ownFile-web)
+2021-10-27 18:22:08.5594 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-10-27 18:22:08.6168 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-10-27 18:22:08.6812 Info Configuration initialized.
+2021-10-27 18:22:08.6812 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-10-27 18:26:24.0539 Info Message Template Auto Format enabled
+2021-10-27 18:26:24.1408 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-27 18:26:24.3892 Info Adding target FileTarget(Name=allfile)
+2021-10-27 18:26:24.4031 Info Adding target FileTarget(Name=ownFile-web)
+2021-10-27 18:26:24.4776 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-10-27 18:26:24.5459 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-10-27 18:26:24.6276 Info Configuration initialized.
+2021-10-27 18:26:24.6299 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-10-27 18:36:11.7420 Info Message Template Auto Format enabled
+2021-10-27 18:36:11.7727 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-27 18:36:12.0798 Info Adding target FileTarget(Name=allfile)
+2021-10-27 18:36:12.0947 Info Adding target FileTarget(Name=ownFile-web)
+2021-10-27 18:36:12.1315 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-10-27 18:36:12.6063 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-10-27 18:36:12.7841 Info Configuration initialized.
+2021-10-27 18:36:12.7866 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-10-27 18:44:43.9326 Info Message Template Auto Format enabled
+2021-10-27 18:44:43.9977 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-27 18:44:44.1834 Info Adding target FileTarget(Name=allfile)
+2021-10-27 18:44:44.1834 Info Adding target FileTarget(Name=ownFile-web)
+2021-10-27 18:44:44.2320 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-10-27 18:44:44.2938 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-10-27 18:44:44.3596 Info Configuration initialized.
+2021-10-27 18:44:44.3596 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-10-27 18:55:01.0762 Info Message Template Auto Format enabled
+2021-10-27 18:55:01.1139 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-27 18:55:01.3150 Info Adding target FileTarget(Name=allfile)
+2021-10-27 18:55:01.3211 Info Adding target FileTarget(Name=ownFile-web)
+2021-10-27 18:55:01.4048 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-10-27 18:55:01.4823 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-10-27 18:55:01.5515 Info Configuration initialized.
+2021-10-27 18:55:01.5515 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-10-27 19:00:05.5785 Info Message Template Auto Format enabled
+2021-10-27 19:00:05.6113 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-27 19:00:05.7823 Info Adding target FileTarget(Name=allfile)
+2021-10-27 19:00:05.7875 Info Adding target FileTarget(Name=ownFile-web)
+2021-10-27 19:00:05.8302 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-10-27 19:00:05.8779 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-10-27 19:00:05.9514 Info Configuration initialized.
+2021-10-27 19:00:05.9514 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-10-27 19:00:07.7719 Info AppDomain Shutting down. Logger closing...
+2021-10-27 19:00:07.8069 Info Logger has been shut down.
+2021-10-27 19:00:19.4111 Info Message Template Auto Format enabled
+2021-10-27 19:00:19.4310 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-27 19:00:19.5963 Info Adding target FileTarget(Name=allfile)
+2021-10-27 19:00:19.6034 Info Adding target FileTarget(Name=ownFile-web)
+2021-10-27 19:00:19.6260 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-10-27 19:00:19.6735 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-10-27 19:00:19.7531 Info Configuration initialized.
+2021-10-27 19:00:19.7611 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-10-27 19:00:22.2745 Info AppDomain Shutting down. Logger closing...
+2021-10-27 19:00:22.3270 Info Logger has been shut down.
+2021-10-27 19:00:48.2007 Info Message Template Auto Format enabled
+2021-10-27 19:00:48.2201 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-27 19:00:48.3539 Info Adding target FileTarget(Name=allfile)
+2021-10-27 19:00:48.3539 Info Adding target FileTarget(Name=ownFile-web)
+2021-10-27 19:00:48.3788 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-10-27 19:00:48.4284 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-10-27 19:00:48.4733 Info Configuration initialized.
+2021-10-27 19:00:48.4733 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-10-27 19:00:52.0150 Info AppDomain Shutting down. Logger closing...
+2021-10-27 19:00:52.0587 Info Logger has been shut down.
+2021-10-27 19:03:16.7543 Info Message Template Auto Format enabled
+2021-10-27 19:03:16.7750 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-27 19:03:16.9290 Info Adding target FileTarget(Name=allfile)
+2021-10-27 19:03:16.9290 Info Adding target FileTarget(Name=ownFile-web)
+2021-10-27 19:03:16.9579 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-10-27 19:03:17.0067 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-10-27 19:03:17.0582 Info Configuration initialized.
+2021-10-27 19:03:17.0582 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-10-27 19:03:19.4660 Info AppDomain Shutting down. Logger closing...
+2021-10-27 19:03:19.5138 Info Logger has been shut down.
+2021-10-27 19:03:39.1710 Info Message Template Auto Format enabled
+2021-10-27 19:03:39.1937 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-27 19:03:39.3405 Info Adding target FileTarget(Name=allfile)
+2021-10-27 19:03:39.3405 Info Adding target FileTarget(Name=ownFile-web)
+2021-10-27 19:03:39.3729 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-10-27 19:03:39.4230 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-10-27 19:03:39.4869 Info Configuration initialized.
+2021-10-27 19:03:39.4893 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-10-27 19:03:42.5939 Info AppDomain Shutting down. Logger closing...
+2021-10-27 19:03:42.6307 Info Logger has been shut down.
+2021-10-27 19:06:53.9104 Info Message Template Auto Format enabled
+2021-10-27 19:06:53.9409 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-27 19:06:54.0970 Info Adding target FileTarget(Name=allfile)
+2021-10-27 19:06:54.1039 Info Adding target FileTarget(Name=ownFile-web)
+2021-10-27 19:06:54.1351 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-10-27 19:06:54.1959 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-10-27 19:06:54.2566 Info Configuration initialized.
+2021-10-27 19:06:54.2566 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-10-27 19:11:41.0193 Info Message Template Auto Format enabled
+2021-10-27 19:11:41.0472 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-27 19:11:41.1920 Info Adding target FileTarget(Name=allfile)
+2021-10-27 19:11:41.1920 Info Adding target FileTarget(Name=ownFile-web)
+2021-10-27 19:11:41.2208 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-10-27 19:11:41.2742 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-10-27 19:11:41.3245 Info Configuration initialized.
+2021-10-27 19:11:41.3245 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-10-27 19:11:43.7148 Info AppDomain Shutting down. Logger closing...
+2021-10-27 19:11:43.7541 Info Logger has been shut down.
+2021-10-27 19:11:57.6036 Info Message Template Auto Format enabled
+2021-10-27 19:11:57.6239 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-27 19:11:57.7719 Info Adding target FileTarget(Name=allfile)
+2021-10-27 19:11:57.7719 Info Adding target FileTarget(Name=ownFile-web)
+2021-10-27 19:11:57.7998 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-10-27 19:11:57.8463 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-10-27 19:11:57.8996 Info Configuration initialized.
+2021-10-27 19:11:57.8996 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-10-27 19:12:00.9096 Info AppDomain Shutting down. Logger closing...
+2021-10-27 19:12:00.9505 Info Logger has been shut down.
+2021-10-27 19:16:18.7933 Info Message Template Auto Format enabled
+2021-10-27 19:16:18.8168 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-27 19:16:18.9559 Info Adding target FileTarget(Name=allfile)
+2021-10-27 19:16:18.9610 Info Adding target FileTarget(Name=ownFile-web)
+2021-10-27 19:16:19.0008 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-10-27 19:16:19.0574 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-10-27 19:16:19.1714 Info Configuration initialized.
+2021-10-27 19:16:19.1714 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-10-27 19:16:22.1650 Info AppDomain Shutting down. Logger closing...
+2021-10-27 19:16:22.2078 Info Logger has been shut down.
+2021-10-27 19:16:35.0000 Info Message Template Auto Format enabled
+2021-10-27 19:16:35.0224 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-27 19:16:35.2256 Info Adding target FileTarget(Name=allfile)
+2021-10-27 19:16:35.2256 Info Adding target FileTarget(Name=ownFile-web)
+2021-10-27 19:16:35.2553 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-10-27 19:16:35.3476 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-10-27 19:16:35.4015 Info Configuration initialized.
+2021-10-27 19:16:35.4015 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-10-27 19:16:38.5420 Info AppDomain Shutting down. Logger closing...
+2021-10-27 19:16:38.5844 Info Logger has been shut down.
+2021-10-27 19:17:55.0754 Info Message Template Auto Format enabled
+2021-10-27 19:17:55.0994 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-27 19:17:55.2451 Info Adding target FileTarget(Name=allfile)
+2021-10-27 19:17:55.2940 Info Adding target FileTarget(Name=ownFile-web)
+2021-10-27 19:17:55.3232 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-10-27 19:17:55.3685 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-10-27 19:17:55.4316 Info Configuration initialized.
+2021-10-27 19:17:55.4316 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-10-27 19:24:29.5218 Info Message Template Auto Format enabled
+2021-10-27 19:24:29.5469 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-27 19:24:29.7056 Info Adding target FileTarget(Name=allfile)
+2021-10-27 19:24:29.7119 Info Adding target FileTarget(Name=ownFile-web)
+2021-10-27 19:24:29.7393 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-10-27 19:24:29.8226 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-10-27 19:24:29.9003 Info Configuration initialized.
+2021-10-27 19:24:29.9003 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-10-27 19:31:24.8043 Info Message Template Auto Format enabled
+2021-10-27 19:31:24.8238 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-27 19:31:24.9688 Info Adding target FileTarget(Name=allfile)
+2021-10-27 19:31:24.9741 Info Adding target FileTarget(Name=ownFile-web)
+2021-10-27 19:31:24.9963 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-10-27 19:31:25.0405 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-10-27 19:31:25.0966 Info Configuration initialized.
+2021-10-27 19:31:25.0986 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-10-27 19:31:27.4618 Info AppDomain Shutting down. Logger closing...
+2021-10-27 19:31:27.4971 Info Logger has been shut down.
+2021-10-27 19:31:49.6382 Info Message Template Auto Format enabled
+2021-10-27 19:31:49.6581 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-27 19:31:49.8119 Info Adding target FileTarget(Name=allfile)
+2021-10-27 19:31:49.8166 Info Adding target FileTarget(Name=ownFile-web)
+2021-10-27 19:31:49.8499 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-10-27 19:31:49.9006 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-10-27 19:31:49.9502 Info Configuration initialized.
+2021-10-27 19:31:49.9502 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-10-27 19:31:52.7429 Info AppDomain Shutting down. Logger closing...
+2021-10-27 19:31:52.7962 Info Logger has been shut down.
+2021-10-27 19:32:18.0284 Info Message Template Auto Format enabled
+2021-10-27 19:32:18.0460 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-27 19:32:18.1792 Info Adding target FileTarget(Name=allfile)
+2021-10-27 19:32:18.1792 Info Adding target FileTarget(Name=ownFile-web)
+2021-10-27 19:32:18.2061 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-10-27 19:32:18.2534 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-10-27 19:32:18.3014 Info Configuration initialized.
+2021-10-27 19:32:18.3014 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-10-27 19:32:20.6058 Info AppDomain Shutting down. Logger closing...
+2021-10-27 19:32:20.6441 Info Logger has been shut down.
+2021-10-27 19:32:34.1070 Info Message Template Auto Format enabled
+2021-10-27 19:32:34.1541 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-27 19:32:34.3083 Info Adding target FileTarget(Name=allfile)
+2021-10-27 19:32:34.3083 Info Adding target FileTarget(Name=ownFile-web)
+2021-10-27 19:32:34.3418 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-10-27 19:32:34.3881 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-10-27 19:32:34.4379 Info Configuration initialized.
+2021-10-27 19:32:34.4379 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-10-27 19:32:37.4666 Info AppDomain Shutting down. Logger closing...
+2021-10-27 19:32:37.5003 Info Logger has been shut down.
+2021-10-27 20:00:44.5575 Info Message Template Auto Format enabled
+2021-10-27 20:00:44.5897 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-27 20:00:44.8357 Info Adding target FileTarget(Name=allfile)
+2021-10-27 20:00:44.8784 Info Adding target FileTarget(Name=ownFile-web)
+2021-10-27 20:00:44.9037 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-10-27 20:00:44.9627 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-10-27 20:00:45.0451 Info Configuration initialized.
+2021-10-27 20:00:45.0451 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-10-27 20:36:08.5965 Info Message Template Auto Format enabled
+2021-10-27 20:36:08.7179 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-27 20:36:08.9276 Info Adding target FileTarget(Name=allfile)
+2021-10-27 20:36:08.9276 Info Adding target FileTarget(Name=ownFile-web)
+2021-10-27 20:36:08.9607 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-10-27 20:36:09.0187 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-10-27 20:36:09.0996 Info Configuration initialized.
+2021-10-27 20:36:09.0996 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-10-27 20:43:21.2718 Info Message Template Auto Format enabled
+2021-10-27 20:43:21.2961 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-27 20:43:21.4520 Info Adding target FileTarget(Name=allfile)
+2021-10-27 20:43:21.4637 Info Adding target FileTarget(Name=ownFile-web)
+2021-10-27 20:43:21.4893 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-10-27 20:43:21.5890 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-10-27 20:43:21.6450 Info Configuration initialized.
+2021-10-27 20:43:21.6450 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-10-27 22:03:47.9156 Info Message Template Auto Format enabled
+2021-10-27 22:03:47.9511 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-27 22:03:48.1285 Info Adding target FileTarget(Name=allfile)
+2021-10-27 22:03:48.1383 Info Adding target FileTarget(Name=ownFile-web)
+2021-10-27 22:03:48.1673 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-10-27 22:03:48.2175 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-10-27 22:03:48.2825 Info Configuration initialized.
+2021-10-27 22:03:48.2851 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-10-27 22:03:51.0208 Info AppDomain Shutting down. Logger closing...
+2021-10-27 22:03:51.1023 Info Logger has been shut down.
+2021-10-27 22:04:11.4376 Info Message Template Auto Format enabled
+2021-10-27 22:04:11.4616 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-27 22:04:11.6260 Info Adding target FileTarget(Name=allfile)
+2021-10-27 22:04:11.6341 Info Adding target FileTarget(Name=ownFile-web)
+2021-10-27 22:04:11.6553 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-10-27 22:04:11.7183 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-10-27 22:04:11.7733 Info Configuration initialized.
+2021-10-27 22:04:11.7733 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-10-27 22:04:14.8589 Info AppDomain Shutting down. Logger closing...
+2021-10-27 22:04:14.9034 Info Logger has been shut down.
+2021-10-27 22:08:45.7748 Info Message Template Auto Format enabled
+2021-10-27 22:08:45.7988 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-27 22:08:45.9615 Info Adding target FileTarget(Name=allfile)
+2021-10-27 22:08:45.9615 Info Adding target FileTarget(Name=ownFile-web)
+2021-10-27 22:08:45.9985 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-10-27 22:08:46.0493 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-10-27 22:08:46.1050 Info Configuration initialized.
+2021-10-27 22:08:46.1050 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-10-27 22:08:48.8727 Info AppDomain Shutting down. Logger closing...
+2021-10-27 22:08:48.9196 Info Logger has been shut down.
+2021-10-27 22:09:04.7830 Info Message Template Auto Format enabled
+2021-10-27 22:09:04.8018 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-27 22:09:04.9797 Info Adding target FileTarget(Name=allfile)
+2021-10-27 22:09:04.9797 Info Adding target FileTarget(Name=ownFile-web)
+2021-10-27 22:09:05.0377 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-10-27 22:09:05.1013 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-10-27 22:09:05.1611 Info Configuration initialized.
+2021-10-27 22:09:05.1611 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-10-27 22:09:08.8163 Info AppDomain Shutting down. Logger closing...
+2021-10-27 22:09:08.8631 Info Logger has been shut down.
+2021-10-27 22:13:44.0958 Info Message Template Auto Format enabled
+2021-10-27 22:13:44.1384 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-27 22:13:44.3990 Info Adding target FileTarget(Name=allfile)
+2021-10-27 22:13:44.4142 Info Adding target FileTarget(Name=ownFile-web)
+2021-10-27 22:13:44.5390 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-10-27 22:13:44.6490 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-10-27 22:13:44.8126 Info Configuration initialized.
+2021-10-27 22:13:44.8126 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-10-27 22:28:42.2350 Info Message Template Auto Format enabled
+2021-10-27 22:28:42.3939 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-27 22:28:42.6346 Info Adding target FileTarget(Name=allfile)
+2021-10-27 22:28:42.6612 Info Adding target FileTarget(Name=ownFile-web)
+2021-10-27 22:28:42.6959 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-10-27 22:28:42.7696 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-10-27 22:28:42.8531 Info Configuration initialized.
+2021-10-27 22:28:42.8531 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-10-27 22:37:01.2091 Info Message Template Auto Format enabled
+2021-10-27 22:37:01.2448 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-27 22:37:01.5367 Info Adding target FileTarget(Name=allfile)
+2021-10-27 22:37:01.5516 Info Adding target FileTarget(Name=ownFile-web)
+2021-10-27 22:37:01.5846 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-10-27 22:37:01.6931 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-10-27 22:37:01.7925 Info Configuration initialized.
+2021-10-27 22:37:01.7925 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-10-27 22:47:35.1285 Info Message Template Auto Format enabled
+2021-10-27 22:47:35.2088 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-27 22:47:35.5332 Info Adding target FileTarget(Name=allfile)
+2021-10-27 22:47:35.5526 Info Adding target FileTarget(Name=ownFile-web)
+2021-10-27 22:47:35.6839 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-10-27 22:47:35.7605 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-10-27 22:47:35.8864 Info Configuration initialized.
+2021-10-27 22:47:35.8864 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-10-28 08:44:40.0598 Info Message Template Auto Format enabled
+2021-10-28 08:44:40.0873 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-28 08:44:40.2528 Info Adding target FileTarget(Name=allfile)
+2021-10-28 08:44:40.2679 Info Adding target FileTarget(Name=ownFile-web)
+2021-10-28 08:44:40.2927 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-10-28 08:44:40.3538 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-10-28 08:44:40.4244 Info Configuration initialized.
+2021-10-28 08:44:40.4271 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-10-28 08:47:17.9826 Info Message Template Auto Format enabled
+2021-10-28 08:47:18.0060 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-28 08:47:18.1573 Info Adding target FileTarget(Name=allfile)
+2021-10-28 08:47:18.1630 Info Adding target FileTarget(Name=ownFile-web)
+2021-10-28 08:47:18.1872 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-10-28 08:47:18.2426 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-10-28 08:47:18.3169 Info Configuration initialized.
+2021-10-28 08:47:18.3169 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-10-28 08:53:29.0259 Info Message Template Auto Format enabled
+2021-10-28 08:53:29.0483 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-28 08:53:29.1910 Info Adding target FileTarget(Name=allfile)
+2021-10-28 08:53:29.1973 Info Adding target FileTarget(Name=ownFile-web)
+2021-10-28 08:53:29.2219 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-10-28 08:53:29.2908 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-10-28 08:53:29.3502 Info Configuration initialized.
+2021-10-28 08:53:29.3502 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-10-28 11:03:09.0781 Info Message Template Auto Format enabled
+2021-10-28 11:03:09.1095 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-28 11:03:09.4993 Info Adding target FileTarget(Name=allfile)
+2021-10-28 11:03:09.5044 Info Adding target FileTarget(Name=ownFile-web)
+2021-10-28 11:03:09.5427 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-10-28 11:03:09.6393 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-10-28 11:03:09.7459 Info Configuration initialized.
+2021-10-28 11:03:09.7459 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-10-28 16:22:35.6779 Info Message Template Auto Format enabled
+2021-10-28 16:22:35.7342 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-28 16:22:35.9277 Info Adding target FileTarget(Name=allfile)
+2021-10-28 16:22:35.9580 Info Adding target FileTarget(Name=ownFile-web)
+2021-10-28 16:22:36.0437 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-10-28 16:22:36.1185 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-10-28 16:22:36.1950 Info Configuration initialized.
+2021-10-28 16:22:36.2211 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-10-28 17:15:34.2232 Info Message Template Auto Format enabled
+2021-10-28 17:15:34.2811 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-28 17:15:34.6330 Info Adding target FileTarget(Name=allfile)
+2021-10-28 17:15:34.6799 Info Adding target FileTarget(Name=ownFile-web)
+2021-10-28 17:15:34.8006 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-10-28 17:15:34.9919 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-10-28 17:15:35.1388 Info Configuration initialized.
+2021-10-28 17:15:35.1712 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-10-29 08:47:46.3239 Info Message Template Auto Format enabled
+2021-10-29 08:47:46.3552 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-29 08:47:46.5301 Info Adding target FileTarget(Name=allfile)
+2021-10-29 08:47:46.5369 Info Adding target FileTarget(Name=ownFile-web)
+2021-10-29 08:47:46.5653 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-10-29 08:47:46.6240 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-10-29 08:47:46.6868 Info Configuration initialized.
+2021-10-29 08:47:46.6868 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-10-29 11:01:20.0520 Info Message Template Auto Format enabled
+2021-10-29 11:01:20.0966 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-29 11:01:20.3751 Info Adding target FileTarget(Name=allfile)
+2021-10-29 11:01:20.3854 Info Adding target FileTarget(Name=ownFile-web)
+2021-10-29 11:01:20.4348 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-10-29 11:01:20.5525 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-10-29 11:01:20.6406 Info Configuration initialized.
+2021-10-29 11:01:20.6504 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-10-30 11:02:46.1252 Info Message Template Auto Format enabled
+2021-10-30 11:02:46.1596 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-30 11:02:46.8173 Info Adding target FileTarget(Name=allfile)
+2021-10-30 11:02:46.8173 Info Adding target FileTarget(Name=ownFile-web)
+2021-10-30 11:02:46.9030 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-10-30 11:02:47.0033 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-10-30 11:02:47.1134 Info Configuration initialized.
+2021-10-30 11:02:47.1134 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-10-30 16:08:44.3269 Info Message Template Auto Format enabled
+2021-10-30 16:08:44.3764 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-30 16:08:44.5982 Info Adding target FileTarget(Name=allfile)
+2021-10-30 16:08:44.5982 Info Adding target FileTarget(Name=ownFile-web)
+2021-10-30 16:08:44.6436 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-10-30 16:08:44.7134 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-10-30 16:08:44.8735 Info Configuration initialized.
+2021-10-30 16:08:44.8735 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-11-02 09:41:45.7552 Info Message Template Auto Format enabled
+2021-11-02 09:41:45.7847 Info Loading assembly: NLog.Web.AspNetCore
+2021-11-02 09:41:45.9673 Info Adding target FileTarget(Name=allfile)
+2021-11-02 09:41:45.9885 Info Adding target FileTarget(Name=ownFile-web)
+2021-11-02 09:41:46.0155 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-11-02 09:41:46.0849 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-11-02 09:41:46.1641 Info Configuration initialized.
+2021-11-02 09:41:46.1641 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-11-03 09:31:12.5236 Info Message Template Auto Format enabled
+2021-11-03 09:31:12.5544 Info Loading assembly: NLog.Web.AspNetCore
+2021-11-03 09:31:13.0478 Info Adding target FileTarget(Name=allfile)
+2021-11-03 09:31:13.3779 Info Adding target FileTarget(Name=ownFile-web)
+2021-11-03 09:31:13.4137 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-11-03 09:31:13.7549 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-11-03 09:31:13.8358 Info Configuration initialized.
+2021-11-03 09:31:13.8358 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-11-04 10:40:19.1984 Info Message Template Auto Format enabled
+2021-11-04 10:40:19.2258 Info Loading assembly: NLog.Web.AspNetCore
+2021-11-04 10:40:19.4024 Info Adding target FileTarget(Name=allfile)
+2021-11-04 10:40:19.4080 Info Adding target FileTarget(Name=ownFile-web)
+2021-11-04 10:40:19.4369 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-11-04 10:40:19.4956 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-11-04 10:40:19.5792 Info Configuration initialized.
+2021-11-04 10:40:19.5792 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-11-06 08:22:11.6438 Info Message Template Auto Format enabled
+2021-11-06 08:22:11.6724 Info Loading assembly: NLog.Web.AspNetCore
+2021-11-06 08:22:11.9044 Info Adding target FileTarget(Name=allfile)
+2021-11-06 08:22:11.9044 Info Adding target FileTarget(Name=ownFile-web)
+2021-11-06 08:22:11.9557 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-11-06 08:22:12.0784 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-11-06 08:22:12.1713 Info Configuration initialized.
+2021-11-06 08:22:12.1713 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-11-06 08:35:05.6801 Info Message Template Auto Format enabled
+2021-11-06 08:35:05.7216 Info Loading assembly: NLog.Web.AspNetCore
+2021-11-06 08:35:05.9599 Info Adding target FileTarget(Name=allfile)
+2021-11-06 08:35:05.9942 Info Adding target FileTarget(Name=ownFile-web)
+2021-11-06 08:35:06.0193 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-11-06 08:35:06.1004 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-11-06 08:35:06.1770 Info Configuration initialized.
+2021-11-06 08:35:06.1770 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-11-06 08:37:30.1918 Info Message Template Auto Format enabled
+2021-11-06 08:37:30.2514 Info Loading assembly: NLog.Web.AspNetCore
+2021-11-06 08:37:30.4458 Info Adding target FileTarget(Name=allfile)
+2021-11-06 08:37:30.4517 Info Adding target FileTarget(Name=ownFile-web)
+2021-11-06 08:37:30.4846 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-11-06 08:37:30.5762 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-11-06 08:37:30.6518 Info Configuration initialized.
+2021-11-06 08:37:30.6537 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-11-06 08:41:42.7396 Info Message Template Auto Format enabled
+2021-11-06 08:41:42.7917 Info Loading assembly: NLog.Web.AspNetCore
+2021-11-06 08:41:43.0154 Info Adding target FileTarget(Name=allfile)
+2021-11-06 08:41:43.0286 Info Adding target FileTarget(Name=ownFile-web)
+2021-11-06 08:41:43.0694 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-11-06 08:41:43.1526 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-11-06 08:41:43.2502 Info Configuration initialized.
+2021-11-06 08:41:43.2502 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-11-06 08:48:23.9051 Info Message Template Auto Format enabled
+2021-11-06 08:48:23.9977 Info Loading assembly: NLog.Web.AspNetCore
+2021-11-06 08:48:24.2507 Info Adding target FileTarget(Name=allfile)
+2021-11-06 08:48:24.2507 Info Adding target FileTarget(Name=ownFile-web)
+2021-11-06 08:48:24.3052 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-11-06 08:48:24.3957 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-11-06 08:48:24.4762 Info Configuration initialized.
+2021-11-06 08:48:24.4829 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-11-06 09:39:32.6816 Info Message Template Auto Format enabled
+2021-11-06 09:39:32.7063 Info Loading assembly: NLog.Web.AspNetCore
+2021-11-06 09:39:32.9127 Info Adding target FileTarget(Name=allfile)
+2021-11-06 09:39:32.9186 Info Adding target FileTarget(Name=ownFile-web)
+2021-11-06 09:39:32.9466 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-11-06 09:39:33.0418 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-11-06 09:39:33.1438 Info Configuration initialized.
+2021-11-06 09:39:33.1438 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-11-07 09:30:45.2333 Info Message Template Auto Format enabled
+2021-11-07 09:30:45.2723 Info Loading assembly: NLog.Web.AspNetCore
+2021-11-07 09:30:45.5652 Info Adding target FileTarget(Name=allfile)
+2021-11-07 09:30:45.5652 Info Adding target FileTarget(Name=ownFile-web)
+2021-11-07 09:30:45.6059 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-11-07 09:30:45.6764 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-11-07 09:30:45.7546 Info Configuration initialized.
+2021-11-07 09:30:45.7546 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-11-08 07:09:50.7832 Info Message Template Auto Format enabled
+2021-11-08 07:09:50.8537 Info Loading assembly: NLog.Web.AspNetCore
+2021-11-08 07:09:51.0016 Info Adding target FileTarget(Name=allfile)
+2021-11-08 07:09:51.0016 Info Adding target FileTarget(Name=ownFile-web)
+2021-11-08 07:09:51.0446 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-11-08 07:09:51.1103 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-11-08 07:09:51.1767 Info Configuration initialized.
+2021-11-08 07:09:51.1767 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-11-09 07:20:27.8440 Info Message Template Auto Format enabled
+2021-11-09 07:20:28.0686 Info Loading assembly: NLog.Web.AspNetCore
+2021-11-09 07:20:28.7069 Info Adding target FileTarget(Name=allfile)
+2021-11-09 07:20:29.2728 Info Adding target FileTarget(Name=ownFile-web)
+2021-11-09 07:20:29.3038 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-11-09 07:20:29.5098 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-11-09 07:20:29.6296 Info Configuration initialized.
+2021-11-09 07:20:29.6296 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-11-09 09:14:34.2527 Info Message Template Auto Format enabled
+2021-11-09 09:14:34.3245 Info Loading assembly: NLog.Web.AspNetCore
+2021-11-09 09:14:34.5733 Info Adding target FileTarget(Name=allfile)
+2021-11-09 09:14:34.5876 Info Adding target FileTarget(Name=ownFile-web)
+2021-11-09 09:14:34.6341 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-11-09 09:14:34.7271 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-11-09 09:14:34.8476 Info Configuration initialized.
+2021-11-09 09:14:34.8476 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-11-09 17:22:27.3101 Info Message Template Auto Format enabled
+2021-11-09 17:22:27.3960 Info Loading assembly: NLog.Web.AspNetCore
+2021-11-09 17:22:27.5974 Info Adding target FileTarget(Name=allfile)
+2021-11-09 17:22:27.6083 Info Adding target FileTarget(Name=ownFile-web)
+2021-11-09 17:22:27.6393 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-11-09 17:22:27.7079 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-11-09 17:22:27.7794 Info Configuration initialized.
+2021-11-09 17:22:27.7794 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-11-09 17:32:15.2769 Info Message Template Auto Format enabled
+2021-11-09 17:32:15.3736 Info Loading assembly: NLog.Web.AspNetCore
+2021-11-09 17:32:15.5836 Info Adding target FileTarget(Name=allfile)
+2021-11-09 17:32:15.5923 Info Adding target FileTarget(Name=ownFile-web)
+2021-11-09 17:32:15.6295 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-11-09 17:32:15.7170 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-11-09 17:32:15.8151 Info Configuration initialized.
+2021-11-09 17:32:15.8151 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-11-09 17:50:22.2327 Info Message Template Auto Format enabled
+2021-11-09 17:50:22.2952 Info Loading assembly: NLog.Web.AspNetCore
+2021-11-09 17:50:22.5106 Info Adding target FileTarget(Name=allfile)
+2021-11-09 17:50:22.5106 Info Adding target FileTarget(Name=ownFile-web)
+2021-11-09 17:50:22.5816 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-11-09 17:50:22.6609 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-11-09 17:50:22.7446 Info Configuration initialized.
+2021-11-09 17:50:22.7446 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-11-09 18:22:31.7486 Info Message Template Auto Format enabled
+2021-11-09 18:22:31.9034 Info Loading assembly: NLog.Web.AspNetCore
+2021-11-09 18:22:32.2029 Info Adding target FileTarget(Name=allfile)
+2021-11-09 18:22:32.2029 Info Adding target FileTarget(Name=ownFile-web)
+2021-11-09 18:22:32.2454 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-11-09 18:22:32.3198 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-11-09 18:22:32.3947 Info Configuration initialized.
+2021-11-09 18:22:32.3947 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-11-10 08:24:14.3027 Info Message Template Auto Format enabled
+2021-11-10 08:24:14.4435 Info Loading assembly: NLog.Web.AspNetCore
+2021-11-10 08:24:14.7778 Info Adding target FileTarget(Name=allfile)
+2021-11-10 08:24:14.7903 Info Adding target FileTarget(Name=ownFile-web)
+2021-11-10 08:24:14.8422 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-11-10 08:24:15.0023 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-11-10 08:24:15.1045 Info Configuration initialized.
+2021-11-10 08:24:15.1045 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-11-11 07:44:19.8867 Info Message Template Auto Format enabled
+2021-11-11 07:44:20.0878 Info Loading assembly: NLog.Web.AspNetCore
+2021-11-11 07:44:20.3600 Info Adding target FileTarget(Name=allfile)
+2021-11-11 07:44:20.3732 Info Adding target FileTarget(Name=ownFile-web)
+2021-11-11 07:44:20.4345 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-11-11 07:44:20.5182 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-11-11 07:44:20.6124 Info Configuration initialized.
+2021-11-11 07:44:20.6124 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-11-11 10:45:09.8249 Info Message Template Auto Format enabled
+2021-11-11 10:45:10.2061 Info Loading assembly: NLog.Web.AspNetCore
+2021-11-11 10:45:10.7584 Info Adding target FileTarget(Name=allfile)
+2021-11-11 10:45:10.7741 Info Adding target FileTarget(Name=ownFile-web)
+2021-11-11 10:45:10.8334 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-11-11 10:45:11.0536 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-11-11 10:45:11.2713 Info Configuration initialized.
+2021-11-11 10:45:11.2753 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-11-11 12:43:29.4502 Info Message Template Auto Format enabled
+2021-11-11 12:43:29.5177 Info Loading assembly: NLog.Web.AspNetCore
+2021-11-11 12:43:29.8996 Info Adding target FileTarget(Name=allfile)
+2021-11-11 12:43:29.8996 Info Adding target FileTarget(Name=ownFile-web)
+2021-11-11 12:43:29.9672 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-11-11 12:43:30.0797 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-11-11 12:43:30.1969 Info Configuration initialized.
+2021-11-11 12:43:30.1969 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-11-11 12:48:18.4338 Info Message Template Auto Format enabled
+2021-11-11 12:48:18.5072 Info Loading assembly: NLog.Web.AspNetCore
+2021-11-11 12:48:18.8070 Info Adding target FileTarget(Name=allfile)
+2021-11-11 12:48:18.8070 Info Adding target FileTarget(Name=ownFile-web)
+2021-11-11 12:48:18.9166 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-11-11 12:48:19.0111 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-11-11 12:48:19.1467 Info Configuration initialized.
+2021-11-11 12:48:19.1502 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-11-12 07:15:44.7058 Info Message Template Auto Format enabled
+2021-11-12 07:15:44.9309 Info Loading assembly: NLog.Web.AspNetCore
+2021-11-12 07:15:45.2823 Info Adding target FileTarget(Name=allfile)
+2021-11-12 07:15:45.4295 Info Adding target FileTarget(Name=ownFile-web)
+2021-11-12 07:15:45.4869 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-11-12 07:15:45.5553 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-11-12 07:15:45.6229 Info Configuration initialized.
+2021-11-12 07:15:45.6229 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-11-12 14:16:44.9111 Info Message Template Auto Format enabled
+2021-11-12 14:16:44.9641 Info Loading assembly: NLog.Web.AspNetCore
+2021-11-12 14:16:45.1955 Info Adding target FileTarget(Name=allfile)
+2021-11-12 14:16:45.1955 Info Adding target FileTarget(Name=ownFile-web)
+2021-11-12 14:16:45.2765 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2021-11-12 14:16:45.4546 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=54, FilePath=C:\Users\HP\source\felloeship\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.config
+2021-11-12 14:16:45.5418 Info Configuration initialized.
+2021-11-12 14:16:45.5418 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False

@@ -10,11 +10,14 @@ namespace FundooNotes.Controllers
     using FundooManager.Interface;
     using FundooModels;
     using Microsoft.AspNetCore.Mvc;
+    using Microsoft.Extensions.Logging;
+    using StackExchange.Redis;
 
     /// <summary>
     /// class user controller
     /// </summary>
     /// <seealso cref="Microsoft.AspNetCore.Mvc.ControllerBase" />
+    [ApiController]
     public class UserController : ControllerBase
     {
         /// <summary>
@@ -23,12 +26,18 @@ namespace FundooNotes.Controllers
         private readonly IUserManager manager;
 
         /// <summary>
+        /// The Ilogger
+        /// </summary>
+        private readonly ILogger<UserController> logger;
+
+        /// <summary>
         /// Initializes a new instance of the <see cref="UserController"/> class.
         /// </summary>
         /// <param name="manager">The manager.</param>
-        public UserController(IUserManager manager)
+        public UserController(IUserManager manager, ILogger<UserController> logger)
         {
             this.manager = manager;
+            this.logger = logger;
         }
 
         /// <summary>
@@ -42,18 +51,22 @@ namespace FundooNotes.Controllers
         {
             try
             {
+                this.logger.LogInformation(user.FirstName + " " + user.LastName + " is trying to register");
                 string resultMessage = await this.manager.Register(user);
-                if (resultMessage.Equals("Registration Successful"))
+                if (resultMessage.Equals("Registration Successful")) 
                 {
+                    this.logger.LogInformation(user.FirstName + " " + user.LastName + " " + resultMessage);
                     return this.Ok(new ResponseModel<string>() { Status = true, Message = resultMessage });
                 }
                 else
                 {
+                    this.logger.LogInformation(user.FirstName + " " + user.LastName + " " + resultMessage);
                     return this.BadRequest(new ResponseModel<string>() { Status = false, Message = resultMessage });
                 }
             }
             catch (Exception e)
             {
+                this.logger.LogWarning("Exception occured while using register " + e.Message);
                 return this.NotFound(new ResponseModel<string>() { Status = false, Message = e.Message });
             }
         }
@@ -70,9 +83,23 @@ namespace FundooNotes.Controllers
             try
             {
                 string result = this.manager.Login(login);
-                if (result.Equals("Login is successful"))
+                if (result.Equals("Login is Successfull"))
                 {
-                    return this.Ok(new ResponseModel<string>() { Status = true, Message = "Login is completed" });
+                    ////Redis Server Connection
+                    ConnectionMultiplexer connectionMultiplexer = ConnectionMultiplexer.Connect("127.0.0.1:6379");
+                    IDatabase database = connectionMultiplexer.GetDatabase();
+                    string firstName = database.StringGet("First Name");
+                    string lastName = database.StringGet("Last Name");
+                    int userId = Convert.ToInt32(database.StringGet("userID"));
+                    UserModel data = new UserModel
+                    {
+                        FirstName = firstName,
+                        LastName = lastName,
+                        UserId = userId,
+                        Email = login.Email
+                    };
+                    string tokenString = this.manager.GenerateToken(login.Email);
+                    return this.Ok(new { Status = true, Message = result, Data = login.Email, tokenString ,UserId = userId });
                 }
                 else
                 {

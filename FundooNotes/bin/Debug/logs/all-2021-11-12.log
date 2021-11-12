@@ -1,0 +1,18 @@
+2021-11-12 07:15:48.2438|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-11-12 07:15:48.6238|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-11-12 07:15:48.7828|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\HP\source\felloeship\FundooNotes\FundooNotes 
+2021-11-12 10:56:53.1515|0|INFO|FundooNotes.Controllers.UserController|gfhbjvfdc afsdvfds is trying to register 
+2021-11-12 10:56:57.5459|0|INFO|FundooNotes.Controllers.UserController|gfhbjvfdc afsdvfds Registration Successful 
+2021-11-12 12:14:35.8889|0|INFO|FundooNotes.Controllers.UserController|Puja latha is trying to register 
+2021-11-12 12:14:37.3848|0|INFO|FundooNotes.Controllers.UserController|Puja latha is trying to register 
+2021-11-12 12:14:39.4378|0|INFO|FundooNotes.Controllers.UserController|Puja latha is trying to register 
+2021-11-12 12:14:39.6260|0|INFO|FundooNotes.Controllers.UserController|Puja latha is trying to register 
+2021-11-12 12:14:41.8384|0|INFO|FundooNotes.Controllers.UserController|Puja latha Registration Successful 
+2021-11-12 12:14:41.8384|0|INFO|FundooNotes.Controllers.UserController|Puja latha Registration Successful 
+2021-11-12 12:14:41.8576|0|INFO|FundooNotes.Controllers.UserController|Puja latha Registration Successful 
+2021-11-12 12:14:41.8840|0|INFO|FundooNotes.Controllers.UserController|Puja latha Registration Successful 
+2021-11-12 14:16:48.3778|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-11-12 14:16:49.0631|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-11-12 14:16:49.1237|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\HP\source\felloeship\FundooNotes\FundooNotes 
+2021-11-12 16:07:33.8362|0|INFO|FundooNotes.Controllers.UserController|Happy Happy is trying to register 
+2021-11-12 16:07:37.4490|0|INFO|FundooNotes.Controllers.UserController|Happy Happy Registration Successful 

@@ -1,0 +1,16 @@
+2021-10-25 11:51:57.0983|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |
+2021-10-25 11:51:57.4513|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |
+2021-10-25 11:51:57.6357|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\HP\source\felloeship\FundooNotes\FundooNotes |url: |action: |
+2021-10-25 11:53:22.9384|0|INFO|FundooNotes.Controllers.UserController|string string is trying to register |url: |action: |
+2021-10-25 11:53:41.3271|0|INFO|FundooNotes.Controllers.UserController|string string Registration Successful |url: |action: |
+2021-10-25 12:06:21.2291|0|INFO|FundooNotes.Controllers.UserController|Sunil ss is trying to register |url: |action: |
+2021-10-25 12:06:24.4313|0|INFO|FundooNotes.Controllers.UserController|Sunil ss Registration Successful |url: |action: |
+2021-10-25 16:23:17.9823|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |
+2021-10-25 16:23:18.1457|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |
+2021-10-25 16:23:18.1887|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\HP\source\felloeship\FundooNotes\FundooNotes |url: |action: |
+2021-10-25 17:53:16.6207|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |
+2021-10-25 17:53:16.8088|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |
+2021-10-25 17:53:16.9353|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\HP\source\felloeship\FundooNotes\FundooNotes |url: |action: |
+2021-10-25 17:59:09.5997|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |
+2021-10-25 17:59:09.7571|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |
+2021-10-25 17:59:09.7907|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\HP\source\felloeship\FundooNotes\FundooNotes |url: |action: |

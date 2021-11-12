@@ -9,7 +9,7 @@ namespace FundooRepository.Repository
     using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
-    using FundooModels;
+    using FundooModels;  
     using FundooRepository.Context;
     using FundooRepository.Interface;
    
@@ -43,7 +43,7 @@ namespace FundooRepository.Repository
         {
             try
             {
-                var exist = this.userContext.labels.Where(x => x.LabelName == labelModel.LabelName && x.UserId == labelModel.UserId).SingleOrDefault();
+                var exist = this.userContext.labels.Where(x => x.LabelName == labelModel.LabelName && x.UserId == labelModel.UserId && x.NotesId != null).SingleOrDefault();
                 if (exist == null)
                 {
                     this.userContext.labels.Add(labelModel);
@@ -167,7 +167,7 @@ namespace FundooRepository.Repository
                 throw new Exception(ex.Message);
             }
         }
-
+           
         /// <summary>
         /// Get the Label Using UserId
         /// </summary>
@@ -232,6 +232,66 @@ namespace FundooRepository.Repository
                 return null;
             }
             catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        /// <summary>
+        /// Add label without note id
+        /// </summary>
+        /// <param name="labelModel">The label model</param>
+        /// <returns>returns string after adding label without noteId</returns>
+        public async Task<string> AddLabelwithoutNoteId(LabelModel labelModel)
+        {
+            try
+            {
+                var exist = this.userContext.labels.Any(x => x.LabelName == labelModel.LabelName);
+                
+                if (!exist)
+                {
+                    if (labelModel.UserId > 0 && labelModel.LabelName != null && labelModel.NotesId == null)
+                    {
+                        this.userContext.labels.Add(labelModel);
+                        await this.userContext.SaveChangesAsync();
+                        return "Added Label";
+                    }
+
+                    return "Label not added";
+                }
+
+                return "Label Already Exists";
+            }
+            catch (ArgumentNullException ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        /// <summary>
+        /// Edit label with noteId
+        /// </summary>
+        /// <param name="noteId">The noteId</param>
+        /// <param name="labelName">The label name</param>
+        /// <param name="newLabelName">The new label name</param>
+        /// <returns>returns string after editing label with noteId</returns>
+        public async Task<string> EditLabelWithNoteId(int noteId, string labelName, string newLabelName)
+        {
+            try
+            {
+                var exist = this.userContext.labels.Where(x => x.LabelName == labelName && x.NotesId == noteId).SingleOrDefault();
+                if (exist != null)
+                {
+                    exist.LabelName = newLabelName;
+                    this.userContext.labels.Update(exist);
+                    await this.userContext.SaveChangesAsync();
+
+                    return "Updated Label";
+                }
+
+                return "Label not present";
+            }
+            catch (ArgumentNullException ex)
             {
                 throw new Exception(ex.Message);
             }

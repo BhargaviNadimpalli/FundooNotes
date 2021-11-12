@@ -108,5 +108,24 @@ namespace FundooManager.Manager
                 throw new Exception(e.Message);
             }
         }
+
+        /// <summary>
+        /// Generate the token.
+        /// </summary>
+        /// <param name="Email">The email.</param>
+        /// <returns>
+        /// returns string after generating token
+        /// </returns>
+        public string GenerateToken(string Email)
+        {
+            try
+            {
+                return this.repository.GenerateToken(Email);
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
     }
 }

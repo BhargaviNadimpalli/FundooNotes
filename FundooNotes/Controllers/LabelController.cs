@@ -244,5 +244,57 @@ namespace FundooNotes.Controllers
                 return this.NotFound(new ResponseModel<string>() { Status = false, Message = ex.Message });
             }
         }
+
+        /// <summary>
+        /// Adds the label without note identifier.
+        /// </summary>
+        /// <param name="labelModel">The label model.</param>
+        /// <returns>Below function returns the status code as IAction Result</returns>
+        [HttpPost]
+        [Route("api/addLabelwithoutNoteId")]
+        public async Task<IActionResult> AddLabelwithoutNoteId([FromBody] LabelModel labelModel)
+        {
+            try
+            {
+                string result = await this.manager.AddLabelwithoutNoteId(labelModel);
+                if (result == "Added Label")
+                {
+                    return this.Ok(new ResponseModel<string>() { Status = true, Message = result });
+                }
+
+                return this.BadRequest(new ResponseModel<string>() { Status = false, Message = result });
+            }
+            catch (Exception ex)
+            {
+                return this.NotFound(new ResponseModel<string>() { Status = false, Message = ex.Message });
+            }
+        }
+
+        /// <summary>
+        /// Edits the label with note identifier.
+        /// </summary>
+        /// <param name="noteId">The note identifier.</param>
+        /// <param name="labelName">Name of the label.</param>
+        /// <param name="newLabelName">New name of the label.</param>
+        /// <returns>Below function returns the status code as IAction Result</returns>
+        [HttpPut]
+        [Route("api/editLabelwithNoteId")]
+        public async Task<IActionResult> EditLabelWithNoteId(int noteId, string labelName, string newLabelName)
+        {
+            try
+            {
+                string result = await this.manager.EditLabel(noteId, labelName, newLabelName);
+                if (result != "Label not present")
+                {
+                    return this.Ok(new ResponseModel<string>() { Status = true, Message = result });
+                }
+
+                return this.BadRequest(new ResponseModel<string>() { Status = false, Message = result });
+            }
+            catch (Exception ex)
+            {
+                return this.NotFound(new ResponseModel<string>() { Status = false, Message = ex.Message });
+            }
+        }
     }
 }
