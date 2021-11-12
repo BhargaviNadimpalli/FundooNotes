@@ -38,5 +38,7 @@ namespace FundooModels
         /// The data.
         /// </value>
         public T Data { get; set; }
+
+       
     }
 }

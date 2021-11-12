@@ -55,13 +55,13 @@ namespace FundooRepository.Repository
         {
             try
             {
-                if (model.Title != null || model.Notes != null || model.Remainder != null)
+                if (model != null)
                 {
                     this.userContext.notes.Add(model);
                     await this.userContext.SaveChangesAsync();
                     return "Note Added Successfully !";
                 }
-                else
+                else 
                 {
                     return "Note is Not Added !";
                 }
@@ -299,20 +299,26 @@ namespace FundooRepository.Repository
         {
             try
             {
-                var exists = this.userContext.notes.Where(x => x.NotesId == notesId && x.Is_Trash == false).SingleOrDefault();
+                var exists = this.userContext.notes.Where(x => x.NotesId == notesId).SingleOrDefault();
                 string message = string.Empty;
                 if (exists != null)
                 {
-                    exists.Is_Trash = true;
-                    message = "Note trashed";
-
-                    if (exists.Is_Pin == true)
+                    if (exists.Is_Trash == true)
                     {
-                        exists.Is_Pin = false;
-                        message = "Note unpinned and trashed";
+                        exists.Is_Trash = false;
+                        message = "Note restored from trash";
+                    }
+                    else
+                    {
+                        exists.Is_Trash = true;
+                        message = "Note trashed";
+                        if (exists.Is_Pin == true)
+                        {
+                            exists.Is_Pin = false;
+                            message = "Note unpinned and trashed";
+                        }
                     }
 
-                    exists.Remainder = null;
                     this.userContext.notes.Update(exists);
                     await this.userContext.SaveChangesAsync();
                 }
@@ -322,34 +328,6 @@ namespace FundooRepository.Repository
                 }
 
                 return message;
-            }
-            catch (Exception e)
-            {
-                throw new Exception(e.Message);
-            }
-        }
-
-        /// <summary>
-        /// Restores from trash.
-        /// </summary>
-        /// <param name="notesId">The notes identifier.</param>
-        /// <returns>
-        /// returns string after restoring from trash
-        /// </returns>
-        public async Task<string> RestoreFromTrash(int notesId)
-        {
-            try
-            {
-                var exists = this.userContext.notes.Where(x => x.NotesId == notesId && x.Is_Trash == true).SingleOrDefault();
-                if (exists != null)
-                {
-                    exists.Is_Trash = false;
-                    this.userContext.notes.Update(exists);
-                    await this.userContext.SaveChangesAsync();
-                    return "Removed from trash !";
-                }
-
-                return "Note is not present in trash";
             }
             catch (Exception e)
             {
@@ -368,9 +346,11 @@ namespace FundooRepository.Repository
         {
             try
             {
-                var exists = this.userContext.notes.Where(x => x.UserId == userId && x.Is_Trash == false && x.Is_Archive == true).ToList();
-                if (exists != null)
+                 var userNotes = this.userContext.notes.Where(x => x.UserId == userId).FirstOrDefault();
+                if (userNotes != null) 
                 {
+                    var exists = this.userContext.notes.Where(x => x.UserId == userId && x.Is_Trash == false && x.Is_Archive == false).ToList();
+
                     return exists;
                 }
 

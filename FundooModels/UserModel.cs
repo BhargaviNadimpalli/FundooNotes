@@ -49,7 +49,7 @@ namespace FundooModels
         /// The email.
         /// </value>
         [Required]
-        [RegularExpression("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:/.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?", ErrorMessage = "Email is not valid. Please enter the valid email")]
+        //[RegularExpression(@"^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:/.[a-zA-Z0-9-]+)*$", ErrorMessage = "Email is not valid. Please enter the valid email")]
         public string Email { get; set; }
 
         /// <summary>

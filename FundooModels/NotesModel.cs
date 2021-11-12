@@ -23,8 +23,25 @@ namespace FundooModels
         /// <value>
         /// The notes identifier.
         /// </value>
-        [Key]
+        [Key] 
         public int NotesId { get; set; }
+
+        /// <summary>
+        /// Gets or sets the user identifier.
+        /// </summary>
+        /// <value>
+        /// The user identifier.
+        /// </value>
+        [ForeignKey("UserModel")]
+        public int UserId { get; set; }
+
+        /// <summary>
+        /// Gets or sets the user model.
+        /// </summary>
+        /// <value>
+        /// The user model.
+        /// </value>
+        public virtual UserModel UserModel { get; set; }
 
         /// <summary>
         /// Gets or sets the title.
@@ -61,7 +78,7 @@ namespace FundooModels
         /// <summary>
         /// Gets or sets the image.
         /// </summary>
-        /// <value>
+        /// <value> 
         /// The image.
         /// </value>
         public string Image { get; set; }
@@ -75,7 +92,7 @@ namespace FundooModels
         [DefaultValue(false)]
         public bool Is_Archive { get; set; }
 
-        /// <summary>
+        /// <summary> 
         /// Gets or sets a value indicating whether this instance is trash.
         /// </summary>
         /// <value>
@@ -93,21 +110,6 @@ namespace FundooModels
         [DefaultValue(false)]
         public bool Is_Pin { get; set; }
 
-        /// <summary>
-        /// Gets or sets the user identifier.
-        /// </summary>
-        /// <value>
-        /// The user identifier.
-        /// </value>
-        [ForeignKey("UserId")]
-        public int UserId { get; set; }
-
-        /// <summary>
-        /// Gets or sets the user model.
-        /// </summary>
-        /// <value>
-        /// The user model.
-        /// </value>
-        public UserModel UserModel { get; set; }
+       
     }
 }

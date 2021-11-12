@@ -1,0 +1,21 @@
+2021-10-26 15:52:29.4873|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-10-26 15:52:29.7979|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-10-26 15:52:29.8899|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\HP\source\felloeship\FundooNotes\FundooNotes 
+2021-10-26 16:08:50.6897|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-10-26 16:08:50.9105|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-10-26 16:08:51.0341|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\HP\source\felloeship\FundooNotes\FundooNotes 
+2021-10-26 16:09:34.1412|0|INFO|FundooNotes.Controllers.UserController|string string is trying to register 
+2021-10-26 16:09:42.1619|0|INFO|FundooNotes.Controllers.UserController|string string Registration Successful 
+2021-10-26 16:14:05.2266|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-10-26 16:14:05.3736|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-10-26 16:14:05.4200|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\HP\source\felloeship\FundooNotes\FundooNotes 
+2021-10-26 16:21:42.8983|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-10-26 16:21:43.1658|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-10-26 16:21:43.2447|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\HP\source\felloeship\FundooNotes\FundooNotes 
+2021-10-26 21:15:53.4746|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-10-26 21:15:53.9302|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-10-26 21:15:54.2792|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\HP\source\felloeship\FundooNotes\FundooNotes 
+2021-10-26 21:16:56.5317|0|INFO|FundooNotes.Controllers.UserController|ghbj vghjk is trying to register 
+2021-10-26 21:17:05.8303|0|INFO|FundooNotes.Controllers.UserController|ghbj vghjk Registration Successful 
+2021-10-26 21:19:07.8494|0|INFO|FundooNotes.Controllers.UserController|Sai Madula is trying to register 
+2021-10-26 21:19:07.9541|0|INFO|FundooNotes.Controllers.UserController|Sai Madula Registration Successful 

@@ -96,7 +96,7 @@ namespace FundooManager.Manager
         /// <summary>
         /// Removes the label using label identifier.
         /// </summary>
-        /// <param name="labelId">The lable identifier.</param>
+        /// <param name="labelId">The label identifier.</param>
         /// <returns>
         /// returns string after removing label using labelId
         /// </returns>
@@ -181,6 +181,46 @@ namespace FundooManager.Manager
             try
             {
                 return this.repository.GetLabelByNoteId(noteId);
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+
+        /// <summary>
+        /// Adds the label without note identifier.
+        /// </summary>
+        /// <param name="labelModel">The label model.</param>
+        /// <returns>
+        /// returns string after adding label without noteId
+        /// </returns>
+        public Task<string> AddLabelwithoutNoteId(LabelModel labelModel)
+        {
+            try
+            {
+                return this.repository.AddLabelwithoutNoteId(labelModel);
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+
+        /// <summary>
+        /// Edits the label with note identifier.
+        /// </summary>
+        /// <param name="noteId">The note identifier.</param>
+        /// <param name="labelName">Name of the label.</param>
+        /// <param name="newLabelName">New name of the label.</param>
+        /// <returns>
+        /// returns string after editing label with noteId
+        /// </returns>
+        public Task<string> EditLabelWithNoteId(int noteId, string labelName, string newLabelName)
+        {
+            try
+            {
+                return this.repository.EditLabelWithNoteId(noteId, labelName, newLabelName);
             }
             catch (Exception e)
             {

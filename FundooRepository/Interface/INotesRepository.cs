@@ -81,13 +81,6 @@ namespace FundooRepository.Interface
         Task<string> DeleteNoteAddToTrash(int notesId);
 
         /// <summary>
-        /// Restores from trash.
-        /// </summary>
-        /// <param name="notesId">The notes identifier.</param>
-        /// <returns>returns string after restoring from trash</returns>
-        Task<string> RestoreFromTrash(int notesId);
-
-        /// <summary>
         /// Gets the remainder notes.
         /// </summary>
         /// <param name="userId">The user identifier.</param>

@@ -6,14 +6,20 @@
 namespace FundooRepository.Repository
 {
     using System;
+    using System.IdentityModel.Tokens.Jwt;
     using System.Linq;
     using System.Net.Mail;
+    using System.Security.Claims;
     using System.Text;
     using System.Threading.Tasks;
     using Experimental.System.Messaging; 
     using FundooModels;
     using FundooRepository.Context;
-    using FundooRepository.Interface;  
+    using FundooRepository.Interface;
+    using Microsoft.Extensions.Configuration;
+    using Microsoft.Extensions.Logging;
+    using Microsoft.IdentityModel.Tokens;
+    using StackExchange.Redis;
 
     /// <summary>
     /// class user repository
@@ -27,12 +33,18 @@ namespace FundooRepository.Repository
         private readonly UserContext userContext;
 
         /// <summary>
+        /// The IConfiguration configuration
+        /// </summary>
+        private readonly IConfiguration configuration;
+
+        /// <summary>
         /// Initializes a new instance of the <see cref="UserRepository"/> class.
         /// </summary>
         /// <param name="userContext">The user context.</param>
-        public UserRepository(UserContext userContext)
+        public UserRepository(UserContext userContext, IConfiguration configuration)
         {
             this.userContext = userContext;
+            this.configuration = configuration;
         }
 
         /// <summary>
@@ -76,17 +88,30 @@ namespace FundooRepository.Repository
         {
             try
             {
-                var result = this.userContext.Users.Where(x => x.Email == login.Email
-                                                                     && x.Password == login.Password).FirstOrDefault();
-
+                var result = this.userContext.Users.Where(x => x.Email == login.Email).FirstOrDefault();
                 if (result != null)
                 {
-                    login.Password = EncryptPassword(login.Password);
-                    return "Login is successful";
+                    login.Password = this.EncryptPassword(login.Password);
+                    var users = this.userContext.Users.Where(x => x.Email == login.Email).FirstOrDefault();
+                    ConnectionMultiplexer connectionMultiplexer = ConnectionMultiplexer.Connect("127.0.0.1:6379");
+                    IDatabase database = connectionMultiplexer.GetDatabase();
+                    database.StringSet(key: "First Name", users.FirstName);
+                    database.StringSet(key: "Last Name", users.LastName);
+                    database.StringSet(key: "userID", users.UserId.ToString());
+
+
+                    if (users.Password == login.Password)
+                    {
+                        return "Login is Successfull";
+                    }
+                    else
+                    {
+                        return "Invalid Password";
+                    }
                 }
                 else
                 {
-                    return "Email is not valid or password is not valid";
+                    return "Register your Email";
                 }
             }
             catch (Exception e)
@@ -220,5 +245,24 @@ namespace FundooRepository.Repository
                 throw new Exception(e.Message);
             }
         }
+
+        public string GenerateToken(string Email)
+        {
+            var key = Encoding.UTF8.GetBytes(this.configuration["SecretKey"]);
+            SymmetricSecurityKey securityKey = new SymmetricSecurityKey(key);
+            SecurityTokenDescriptor descriptor = new SecurityTokenDescriptor
+            {
+                Subject = new ClaimsIdentity(new[]
+            {
+                new Claim(ClaimTypes.Name, Email)
+            }),
+                Expires = DateTime.UtcNow.AddMinutes(30),
+                SigningCredentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256Signature)
+            };
+            JwtSecurityTokenHandler handler = new JwtSecurityTokenHandler();
+            JwtSecurityToken token = handler.CreateJwtSecurityToken(descriptor);
+            return handler.WriteToken(token);
+        }
+
     }
 }

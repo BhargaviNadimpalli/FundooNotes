@@ -104,12 +104,9 @@ namespace FundooRepository.Migrations
                     b.Property<int>("UserId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("UserModelUserId")
-                        .HasColumnType("int");
-
                     b.HasKey("NotesId");
 
-                    b.HasIndex("UserModelUserId");
+                    b.HasIndex("UserId");
 
                     b.ToTable("notes");
                 });
@@ -167,7 +164,9 @@ namespace FundooRepository.Migrations
                 {
                     b.HasOne("FundooModels.UserModel", "UserModel")
                         .WithMany()
-                        .HasForeignKey("UserModelUserId");
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

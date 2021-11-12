@@ -208,25 +208,6 @@ namespace FundooManager.Manager
         }
 
         /// <summary>
-        /// Restores from trash.
-        /// </summary>
-        /// <param name="notesId">The notes identifier.</param>
-        /// <returns>
-        /// returns string after restoring from trash
-        /// </returns>
-        public Task<string> RestoreFromTrash(int notesId)
-        {
-            try
-            {
-                return this.repository.RestoreFromTrash(notesId);
-            }
-            catch (Exception e)
-            {
-                throw new Exception(e.Message);
-            }
-        }
-
-        /// <summary>
         /// Gets the remainder notes.
         /// </summary>
         /// <param name="userId">The user identifier.</param>
